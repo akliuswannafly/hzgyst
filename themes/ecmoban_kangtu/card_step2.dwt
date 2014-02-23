@@ -1,0 +1,76 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- TemplateBeginEditable name="doctitle" -->
+<title>{$page_title}</title>
+<!-- TemplateEndEditable --><!-- TemplateBeginEditable name="head" --><!-- TemplateEndEditable -->
+<meta name="Keywords" content="{$keywords}" />
+<meta name="Description" content="{$description}" />
+<link rel="shortcut icon" href="favicon.ico" />
+<link rel="icon" href="animated_favicon.gif" type="image/gif" />
+<link href="{$ecs_css_path}" rel="stylesheet" type="text/css" />
+{* 包含脚本文件 *}
+{insert_scripts files='common.js'}
+</head>
+<body>
+<!-- #BeginLibraryItem "/library/page_header.lbi" --><!-- #EndLibraryItem -->
+<div class="block" style="background:#FFF">
+<div class="AreaL">
+
+<div class="box cardlinks">
+	<h3><b>网上订购</b></h3>
+	<div class="cnt">
+		<ul>
+		<li class="hover"><a href="#">礼品卡配送预约</a></li>
+		<li><a href="#">购买礼品卡</a></li>
+		<li><a href="#">银行转账帐号</a></li>
+		</ul>
+	</div>
+</div>
+
+</div>
+
+<div class="AreaR">
+
+<div class="box">
+	<div class="card_flow v2">
+	<form>
+	<p>尊敬的顾客，您好！</p>
+	<p>您是我们 ×××系列生态卡用户，</p>
+	<p>请您输入持卡人信息： <span>姓名 <input type="text" /></span> <span>电话 <input type="text" /></span>
+	<div class="form">
+		<div class="formTitle">请您输入收货人信息：</div>
+		<div class="formCnt">
+			<ul class="clearfix">
+			<li style="width:660px;"><b>配送区域：</b>
+				<select><option value="1">中国</option></select>
+				<select><option value="1">请选择省</option></select>
+				<select><option value="1">请选择市</option></select>
+				<i>(必填)</i>
+			</li>
+			<li><b>收货人姓名：</b> <input type="text" /> <i>(必填)</i></li>
+			<li><b>电子邮件：</b> <input type="text" /> <i>(必填)</i></li>
+			<li><b>详细地址：</b> <input type="text" /> <i>(必填)</i></li>
+			<li><b>邮政编码：</b> <input type="text" /></li>
+			<li><b>电话：</b> <input type="text" /> <i>(必填)</i></li>
+			<li><b>手机：</b> <input type="text" /></li>
+			<li><b>标志建筑：</b> <input type="text" /></li>
+			<li><b>最佳送货时间：</b> <input type="text" /></li>
+			</ul>
+			<div class="info"><a href="#" target="_blank">点击查看配送地区及配送时间说明</a></div>
+			<div class="submit"><button type="submit" class="btn">提 交</button></div>
+		</div>
+	</div>
+	<div class="step"><p>换购流程</p></div>
+	</form>
+	</div>
+</div>
+
+</div>
+<div class="blank5"></div>
+</div>
+
+<!-- #BeginLibraryItem "/library/page_footer.lbi" --><!-- #EndLibraryItem -->
+</body>
+</html>

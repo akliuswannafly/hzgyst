@@ -1,0 +1,32 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>源臻 - Error</title>
+    <link href="{$zythemes}/style.css" rel="stylesheet" type="text/css" />
+    <link href="{$zythemes}/error.css" rel="stylesheet" type="text/css" />
+    <link href="{$zythemes}/js/colorbox/colorbox.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" src="{$zythemes}/js/jquery-1.7.2.js"></script>
+    <script type="text/javascript" src="{$zythemes}/js/colorbox/jquery.colorbox.js"></script>
+    <script type="text/javascript" src="{$zythemes}/js/util.js"></script>
+</head>
+
+<body>
+<!-- #BeginLibraryItem "/library/page_header.lbi" --><!-- #EndLibraryItem -->
+
+
+<div id="g-main">
+    <div class="w-page">
+        <div id="page-error">
+            <p class="e-msg">抱歉数据正在建立中……</p>
+            <p class="e-memo">此项功能暂时不能实现！给您带来的不便敬请谅解！</p>
+            <p class="e-conn">如需咨询、购买，请致电源臻会员尊享热线：<b>400-066-0646</b></p>
+            <p class="btns"><a href="index.php" class="btn-anchor">返回首页</a></p>
+        </div>
+    </div>
+</div>
+
+<!-- #BeginLibraryItem "/library/page_footer.lbi" --><!-- #EndLibraryItem -->
+
+</body>
+</html>

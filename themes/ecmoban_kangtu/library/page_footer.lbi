@@ -1,0 +1,68 @@
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<div class="blank"></div><div class="blank"></div>
+
+
+ 
+<div class="block">
+<div class="helpTitBg clearfix">
+	<div class="img"><img src="../images/shuomin.png"></div>
+    <div style="clear:both"> </div>
+    <div class="clearfix">
+        <div>
+        <!--{if $helps}-->
+        <!-- {foreach from=$helps item=help_cat name=no} -->
+        <dl <!-- {if $smarty.foreach.no.last} -->
+			style="background:none"  
+		<!-- {/if} -->>
+          <dt><a href='{$help_cat.cat_id}' title="{$help_cat.cat_name}">{$help_cat.cat_name}</a></dt>
+          <!-- {foreach from=$help_cat.article item=item} -->
+          <dd><a href="{$item.url}" title="{$item.title|escape:html}">{$item.short_title}</a></dd>
+          <!-- {/foreach} -->
+        </dl>
+        <!-- {/foreach} -->
+        <!--{/if}-->
+        </div>
+    </div>
+</div>
+
+<div class="blank" ></div>
+
+<!--底部导航 start-->
+<div id="bottomNav2">
+	<div class="phone">
+		<p><span>服务热线:</span> <b>{$service_phone}</b></p>
+		<p>热线服务时间为 工作日9:00-20:00、双休日9:00-18:00，节假日服务时间另作调整</p>
+	</div>
+ 
+	<div class="bNavList clearfix" style="display:none">
+
+	<!-- {if $navigator_list.bottom} -->
+	<!-- {foreach name=nav_bottom_list from=$navigator_list.bottom item=nav} -->
+	<a href="{$nav.url}" <!-- {if $nav.opennew eq 1} --> target="_blank" <!-- {/if} -->>{$nav.name}</a>
+	<!-- {/foreach} -->
+	<!-- {/if} -->
+	</div>
+
+</div>
+<!--底部导航 end-->
+
+<div class="blank"></div>
+<!--版权 start-->
+<div id="footer">
+ <div class="text" >
+  {$copyright} &nbsp; 
+  <!-- ICP 证书{if $icp_number} -->
+  {$lang.icp_number}:<a href="http://www.miibeian.gov.cn/" target="_blank">{$icp_number}</a>
+  <!-- 结束ICP 证书{/if} -->
+
+
+    {if $stats_code}
+    <div align="left">{$stats_code}</div>
+    {/if}
+	<a href="http://www.zylinkus.com" target="_blank" title="shanghai web design shanghai web development">网站支持</a>
+ </div>
+</div>
+</div>
+<div style="display:none">
+<script src="http://s19.cnzz.com/stat.php?id=5438873&web_id=5438873" language="JavaScript"></script>
+</div>

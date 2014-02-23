@@ -1,0 +1,151 @@
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<script type="text/javascript">
+var process_request = "{$lang.process_request}";
+</script>
+ 
+
+ <div id="topNav" class="clearfix">
+<div class="block clearfix">
+
+<div class="f_l">
+  {insert_scripts files='utils.js'}
+   <font id="ECS_MEMBERZONE">{* ECSHOP 提醒您：根据用户id来调用member_info.lbi显示不同的界面  *}{insert name='member_info'} </font>
+</div>
+
+
+
+<div class="f_r">
+<!--{if $navigator_list.top}-->
+<!-- {foreach name=nav_top_list from=$navigator_list.top item=nav} -->
+  <a class="a1" href="{$nav.url}" <!-- {if $nav.opennew eq 1} --> target="_blank" <!-- {/if} -->>{$nav.name}</a>
+  |
+<!-- {/foreach} -->
+<!-- {/if} -->
+	
+    <a id="g-wb" href="http://e.weibo.com/yuanzhengouwu" target="_blank"><i></i>关注我们</a>
+	<a id="g-wx" href="weixin.html" target="_blank" title="源臻网公共微博"><i></i>微信关注</a>
+</div> 
+
+</div>
+</div>
+
+
+<div style="position:relative;background:#fff;">
+<div class="block clearfix">
+
+<!-- 用户&购物车 -->
+<div class="buy_car_bg_box" >
+
+<div class="usermenu">
+	<dl>
+	<dt><a href="">我的源臻</a></dt>
+	<dd>
+		<div class="settleup-content">
+			<div class="msg">您好，请登录</div>
+			<ul>
+			<li><a href="#">XXX</a></li>
+			</ul>
+		</div>
+	</dd>
+</div>
+
+{insert_scripts files='transport.js'}
+<div class="cartmenu">
+	<dl>
+	<dt id="ECS_CARTINFO"><a href="">购物车<b>0</b>件</a></dt>
+	<dd>
+		<div id="ECS_CARTINFO+" style="float:left">
+		{insert name='cart_info'}
+		</div> 
+	</dd>
+	</dl>
+</div> 
+</div>
+<!-- 购物车 end -->
+
+
+	<div class="f_l" style="padding:8px 0"><a href="../index.php" name="top"><img src="../images/logo.png" width="65" /></a></div>
+	<div class="f_l" style="padding:50px 20px 0;"><img src="../images/banner.png" /></div>
+</div>
+</div>
+ 
+ 
+<div id="mainNav" class="clearfix">
+<div class="block">
+<div class="f_r" style="padding-top:5px;">
+<script type="text/javascript">
+    {literal}
+    <!--
+    function checkSearchForm()
+    {
+        if(document.getElementById('keyword').value)
+        {
+            return true;
+        }
+        else
+        {
+           alert("{$lang.no_keywords}");
+            return false;
+        }
+    }
+    -->
+    {/literal}
+    </script>
+	<form id="searchForm" name="searchForm" method="get" action="search.php" onSubmit="return checkSearchForm()" class="f_r" >
+	<div class="B_input_box">
+	<input name="keywords" type="text" id="keyword" value="请输入搜索关键字" onclick="javascript:this.value=''" class="B_input"/>
+	</div>
+	<input name="imageField" type="submit" value="" class="go" style="cursor:pointer;" />
+	<div style=" clear:both"></div>
+	</form>
+</div>
+
+  <a class="a1 {if $navigator_list.config.index eq 1} cur {/if}" href="../index.php"  >{$lang.home} </a>
+  <!-- {foreach name=nav_middle_list from=$navigator_list.middle item=nav} -->
+ 
+  <div class="u1" onmouseover="this.className='u1 u1_over'" onmouseout="this.className='u1'" >
+  <a  class="a1 {if $nav.active eq 1} cur {/if}"  href="{$nav.url}" {if $nav.opennew eq 1}target="_blank" {/if}>{$nav.name}</a>
+  <!--{if $nav.name eq '源臻基地'}-->
+  <div class="sub_nav">
+<a href="base.php?id=45#1">源臻崇明有机蔬菜基地</a>
+<a href="base.php?id=43#1">源臻阳澄湖大闸蟹基地</a>
+<a href="base.php?id=44#1">源臻舒兰有机大米基地</a>
+<a href="base.php?id=56">源臻生态有机茶园</a>
+<a href="base.php?id=46#1">源臻沈湖会员活动基地</a>
+  </div>
+  <!-- {/if} -->
+    <!--{if $nav.name eq '生态礼卡'}-->
+  <div class="sub_nav">
+<a href="topic.php?topic_id=11">新年8选1生态食品卡</a>
+<a href="topic.php?topic_id=7#1">源臻8选1生态食品卡</a>
+<a href="topic.php?topic_id=7#2">源臻6选1生态茶卡</a>
+<a href="topic.php?topic_id=7#3">源臻定额生态食品卡</a>
+<a href="topic.php?topic_id=7#4">源臻定制卡服务</a>
+<a href="topic.php?topic_id=7#5">采购流程</a>
+  </div>
+  <!-- {/if} -->
+      <!--{if $nav.name eq '本味宅配'}-->
+  <div class="sub_nav">
+<a href="topic.php?topic_id=3#1">宅配套餐</a>
+<a href="data/xls/ben.xlsx">宅配产品清单</a>
+<a href="topic.php?topic_id=21" target="_blank">有机蔬菜周菜单</a>
+<a href="topic.php?topic_id=3#4">宅配简介</a>
+<a href="topic.php?topic_id=3#5">配送服务</a>
+  </div>
+  <!-- {/if} -->
+       <!--{if $nav.name eq '企业采购'}-->
+  <div class="sub_nav">
+<a href="topic.php?topic_id=5#1">企业采购简介</a>
+<a href="topic.php?topic_id=5#2">方案产品</a>
+<a href="topic.php?topic_id=5#3">采购流程</a>
+  </div>
+  <!-- {/if} --> 
+  
+  </div>
+ <!-- {/foreach} -->
+ 
+ </div>
+ </div>
+
+<div class="blank"></div>
+

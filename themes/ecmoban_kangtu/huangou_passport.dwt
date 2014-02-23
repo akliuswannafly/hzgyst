@@ -1,0 +1,243 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- TemplateBeginEditable name="doctitle" -->
+<title>{$page_title}</title>
+<!-- TemplateEndEditable --><!-- TemplateBeginEditable name="head" --><!-- TemplateEndEditable -->
+<meta name="Keywords" content="{$keywords}" />
+<meta name="Description" content="{$description}" />
+<link rel="shortcut icon" href="favicon.ico" />
+<link rel="icon" href="animated_favicon.gif" type="image/gif" />
+<link href="{$ecs_css_path}" rel="stylesheet" type="text/css" />
+{* 包含脚本文件 *}
+{insert_scripts files='common.js'}
+</head>
+<body>
+<!-- #BeginLibraryItem "/library/page_header.lbi" --><!-- #EndLibraryItem -->
+<div class="block" style="background:#FFF">
+<div class="AreaL">
+
+<div class="box cardlinks">
+	<h3><b>网上订购</b></h3>
+	<div class="cnt">
+		<ul>
+		<li class="hover"><a href="#">礼品卡配送预约</a></li>
+		<li><a href="topic.php?topic_id=7">购买礼品卡</a></li>
+		<li><a href="huangou.php?act=bank">银行转账帐号</a></li>
+		</ul>
+	</div>
+</div>
+
+</div>
+<!--{if $action eq 'login'}-->
+<div class="AreaR">
+
+<div class="box cardloginform">
+	<form name="cardLogin" action="huangou.php" method="post" onSubmit="return userLogin()">
+	<div>
+		<p><b>卡号：</b><input type="text" name="huangouname" /></p>
+		<!-- 判断是否启用验证码{if $enabled_captcha} -->
+		<p class="valid"><b>验证码：</b><input type="text" name="captcha" /> <img src="captcha.php?is_login=1&{$rand}" onClick="this.src='captcha.php?is_login=1&'+Math.random()" /></p>
+		<!--{/if}-->
+		 <input type="hidden" name="act" value="act_login" />
+         <input type="hidden" name="back_act" value="{$back_act}" />
+		<p class="submit"><button type="submit" class="btn">提 交</button></p>
+	</div>
+	</form>
+</div>
+
+</div>
+<!--{/if}-->
+<!--{if $action eq 'default'}-->
+        {insert_scripts files='region.js,utils.js,shopping_flow.js'}
+        <script type="text/javascript">
+          region.isAdmin = false;
+          {foreach from=$lang.flow_js item=item key=key}
+          var {$key} = "{$item}";
+          {/foreach}
+
+          {literal}
+          onload = function() {
+            if (!document.all)
+            {
+              document.forms['theForm'].reset();
+            }
+          }
+          {/literal}
+        </script>
+<div class="box">
+	<div class="card_flow v2">
+	{insert_scripts files='utils.js,transport.js'}
+	<form action="huangou.php" method="post" name="theForm" id="theForm" onsubmit="return checkConsignee(this)">
+	<p>尊敬的顾客，您好！</p>
+	<p>您是我们 {$card_info.name}用户，</p>
+	<p>请您输入持卡人信息： <span>姓名 <input type="text" name="truename" value="{$card_truename}" /></span> <span>电话 <input type="text" name="card_tel" value="{$card_tel}" /></span>
+	<!-- {foreach from=$consignee_list item=consignee key=sn} -->
+	<div class="form">
+		<div class="formTitle">请您输入收货人信息：</div>
+		<div class="formCnt">
+			<ul class="clearfix">
+			<li style="width:660px;"><b>配送区域：</b>
+		<select name="country" id="selCountries_{$sn}" onchange="region.changed(this, 1, 'selProvinces_{$sn}')" style="border:1px solid #ccc;">
+			<option value="0">{$lang.please_select}{$name_of_region[0]}</option>
+			<!-- {foreach from=$country_list item=country} -->
+			<option value="{$country.region_id}" {if $consignee.country eq $country.region_id}selected{/if}>{$country.region_name}</option>
+			<!-- {/foreach} -->
+		</select>
+      <select name="province" id="selProvinces_{$sn}" onchange="region.changed(this, 2, 'selCities_{$sn}')" style="border:1px solid #ccc;">
+        <option value="0">{$lang.please_select}{$name_of_region[1]}</option>
+        <!-- {foreach from=$province_list.$sn item=province} -->
+        <option value="{$province.region_id}" {if $consignee.province eq $province.region_id}selected{/if}>{$province.region_name}</option>
+        <!-- {/foreach} -->
+      </select>
+      <select name="city" id="selCities_{$sn}" onchange="region.changed(this, 3, 'selDistricts_{$sn}')" style="border:1px solid #ccc;">
+        <option value="0">{$lang.please_select}{$name_of_region[2]}</option>
+        <!-- {foreach from=$city_list.$sn item=city} -->
+        <option value="{$city.region_id}" {if $consignee.city eq $city.region_id}selected{/if}>{$city.region_name}</option>
+        <!-- {/foreach} -->
+      </select>
+      <select name="district" id="selDistricts_{$sn}" {if !$district_list.$sn}style="display:none"{/if} style="border:1px solid #ccc;">
+        <option value="0">{$lang.please_select}{$name_of_region[3]}</option>
+        <!-- {foreach from=$district_list.$sn item=district} -->
+        <option value="{$district.region_id}" {if $consignee.district eq $district.region_id}selected{/if}>{$district.region_name}</option>
+        <!-- {/foreach} -->
+      </select>
+				<i>({$lang.require_field} )</i>
+			</li>
+			<li><b>收货人姓名：</b> <input type="text" class="inputBg" name="consignee" id="consignee_{$sn}" value="{$consignee.consignee|escape}" /> <i>(必填)</i></li>
+			<li><b>电子邮件：</b> <input name="email" type="text" class="inputBg"  id="email_{$sn}" value="{$consignee.email|escape}" /> </li>
+			<li><b>详细地址：</b> <input name="address" type="text" class="inputBg"  id="address_{$sn}" value="{$consignee.address|escape}" /> <i>(必填)</i></li>
+			<li><b>邮政编码：</b> <input name="zipcode" type="text" class="inputBg"  id="zipcode_{$sn}" value="{$consignee.zipcode|escape}" /></li>
+			<li><b>电话：</b> <input name="tel" type="text" class="inputBg"  id="tel_{$sn}" value="{$consignee.tel|escape}" /> <i>(必填)</i></li>
+			<li><b>手机：</b> <input name="mobile" type="text" class="inputBg"  id="mobile_{$sn}" value="{$consignee.mobile|escape}" /></li>
+			<li><b>标志建筑：</b> <input name="sign_building" type="text" class="inputBg"  id="sign_building_{$sn}" value="{$consignee.sign_building|escape}" /></li>
+			<li><b>最佳送货时间：</b> <input name="best_time" type="text"  class="inputBg" id="best_time_{$sn}" value="{$consignee.best_time|escape}" /></li>
+			</ul>
+			<div class="info"><a href="article.php?id=24" target="_blank">点击查看配送地区及配送时间说明</a></div>
+			<input type="hidden" name="act" value="save_address" />
+			<input name="address_id" type="hidden" value="{$consignee.address_id}" />
+			<input name="back_act" type="hidden" value="{$back_act}" />
+			<div class="submit"><button type="submit" class="btn">提 交</button></div>
+		</div>
+	</div>
+	<!-- {/foreach} -->
+	<!--{if $is_new eq '1'}-->
+	<div class="step"><p>换购流程</p></div>
+	<!-- {/if} -->
+	</form>
+	</div>
+</div>
+<!--{/if}-->
+<!-- {if $action eq 'shopping'} -->
+<div class="AreaR">
+
+<div class="box">
+	<div class="card_flow v3">
+	<form>
+	<h3>请选择您喜欢的套餐</h3>
+	<div class="shadow">
+		<div class="title">218套餐</div>
+		<ul>
+		<form action="huangou.php" method="post" name="theForm2" id="theForm2">
+		<!--{foreach from=$new_goods item=good}-->
+		<li><label><input type="radio" name="check_good" value="{$good.id}" /> <b>{$good.name}</b></label>
+			<div>{$good.brief}</div></li>
+		<!-- {/foreach} -->
+		</ul>
+		<input type="hidden" name="act" value="checkout" />
+		<div class="submit"><button type="submit" class="btn">提 交</button></div>
+		</form>
+	</div>
+	<!--{if $is_new eq '1'}-->
+	<div class="step"><p>换购流程</p></div>
+	<!-- {/if} -->
+	</form>
+	</div>
+</div>
+
+</div>
+<!-- {/if} -->
+<!-- {if $action eq 'checkout'} -->
+<div class="AreaR">
+
+<div class="box">
+	<div class="card_flow v4">
+	<div class="msg">
+		<div>选择成功！</div>
+		<p>请您确认以下订购信息</p>
+	</div>
+	<form>
+	<fieldset>
+		<a href="huangou.php?act=default" class="btn">修 改</a>
+		<legend>持卡人信息：</legend>
+		<div class="cnt">
+			<p><b>姓名：</b> <input type="text" value="{$card_truename}" /></p>
+			<p><b>电话：</b> <input type="text" value="{$card_tel}" /></p>
+		</div>
+	</fieldset>
+	<!--{if $is_new eq '1'}-->
+	<fieldset>
+		<a href="huangou.php?act=shopping" class="btn">修 改</a>
+		<legend>您选择的套餐：</legend>
+		<div class="cnt">
+			<p><b> &nbsp; &nbsp; &nbsp; </b><input type="text" value="{$goods.goods_name}" /></p>
+		</div>
+	</fieldset>
+	<!--{/if}-->
+	<fieldset>
+		<a href="huangou.php?act=default" class="btn">修 改</a>
+		<legend>您的配送信息：</legend>
+		<div class="cnt">
+			<p><b>地址：</b> <input type="text" value="{$consignee_card.address}" /></p>
+			<p><b>收件人：</b> <input type="text" style="width:120px;" value="{$consignee_card.consignee}" /> <b style="margin-left:2em;">电话：</b> <input type="text" style="width:290px;" value="{$consignee_card.mobile}" /></p>
+		</div>
+	</fieldset>
+	<input type="hidden" name="act" value="done" />
+	<div class="submit"><button type="submit" class="btn">确认</button></div>
+	<!--{if $is_new eq '1'}-->
+	<div class="step"><p>换购流程</p></div>
+	<!-- {/if} -->
+	</form>
+	</div>
+</div>
+
+</div>
+<!-- {/if} -->
+<!--{if $action eq 'done'}-->
+<div class="AreaR">
+
+<div class="box">
+	<div class="card_flow v5">
+	<img src="images/card/finish.png" />
+	<!--{if $is_new eq '1'}-->
+	<div class="step"><p>换购流程</p></div>
+	<!-- {/if} -->
+	</div>
+</div>
+
+</div>
+<!-- {/if} -->
+<!--{if $action eq 'bank'}-->
+<div class="AreaR">
+
+<div class="box">
+	<div class="card_flow v5" style="font-weight:bold;">
+	尊敬的客户：<br />
+	您好！<br />
+	请将货款支付至以下账户，谢谢！<br /><br />
+	
+	公司名称：上海源臻堂生态科技有限公司 <br />
+	开户行：上海银行白玉支行 <br />
+	账号：03001508856 <br />
+	</div>
+</div>
+
+</div>
+<!-- {/if} -->
+<div class="blank5"></div>
+</div>
+
+<!-- #BeginLibraryItem "/library/page_footer.lbi" --><!-- #EndLibraryItem -->
+</body>
+</html>

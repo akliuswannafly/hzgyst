@@ -1,0 +1,70 @@
+#g-product{padding-bottom:0px;}
+#g-product .bm-title{text-align:right;font-size:18px;line-height:30px;border-bottom:2px solid #76b12d;}
+#g-product .bm-title p{float:left;padding:0 8px;background:#76b12d;color:#FFF;}
+#g-product .bm-title i{margin:1px 5px 0 0;width:34px;background-image:url(images/i-catehover.png);}
+#g-product .bm-title .more{padding:0 13px;color:#76b12d;}
+
+#g-product .lists{margin-top:8px;padding-bottom:20px;padding-left:13px;height:242px;}
+#g-product .lists li{float:left;margin-right:5px;padding-bottom:12px;background:url(images/pro/pro-shadow.png) bottom;}
+#g-product .p-list{padding:3px;height:222px;width:182px;overflow:hidden;border:1px solid #CCC;line-height:26px;background:url(images/pro/pro-bg.png);}
+#g-product .lv2 .lists li{margin-bottom:20px;}
+#g-product .pic{width:182px;height:170px;overflow:hidden;text-align:center;background:#FFF;}
+#g-product .pname{font-size:14px;color:#004929;}
+#g-product .price del{float:right;color:#666;}
+#g-product .price b{padding-left:16px;font-size:24px;background:url(images/i-price.png) no-repeat left center;color:#76b12d;}
+
+
+#g-prolist.bm-b,#g-goods.bm-b{padding:15px 40px 40px;}
+	.addtocart .btn{padding:13px 0 0 45px;font-size:14px;line-height:21px;background:url(images/i-cartadd.png) no-repeat;border:none;color:#666;}
+#g-prolist .addtocart{margin-top:40px;}
+#g-prolist .addtocart a{display:block;}
+#g-goods .addtocart .btn{float:right;margin-top:-56px;}
+
+#g-prolist .lists li{border-bottom:1px solid #999;}
+#g-prolist .p-list{margin:30px 0 15px;height:185px;}
+#g-prolist .p-list,#g-prolist .p-list a{font-size:14px;color:#666;}
+#g-prolist .pic{float:left;margin-right:20px;padding-bottom:12px;background:url(images/pro/pro-shadow.png) no-repeat bottom;}
+#g-prolist .pic a{display:block;width:184px;height:170px;overflow:hidden;}
+#g-prolist .intro{float:left;width:360px;line-height:2em;}
+#g-prolist .pname{font-weight:bold;}
+#g-prolist .price{float:right;width:120px;}
+#g-prolist .price-now{color:#76b12d;}
+#g-prolist .price-now b{display:block;padding-left:14px;background:url(images/i-price2.png) no-repeat left 20px;font-size:36px;line-height:40px;font-style:normal;}
+
+
+#g-goods{color:#666;}
+#g-goods .goods{padding-top:20px;min-height:330px;}
+#g-goods .picwrap{float:left;width:302px;text-align:center;}
+#g-goods .pic{display:block;border:1px solid #76B12D;}
+#g-goods .info{padding-left:315px;}
+#g-goods .title{font-size:14px;line-height:24px;}
+#g-goods .summary{margin:20px 0;}
+#g-goods .info .lists{padding:20px 0;line-height:2em;border-top:1px solid #999;}
+#g-goods .info .lists i{margin-right:5px;font-style:normal;}
+#g-goods .price-now b{color:#76b12d;}
+#g-goods .info .lists .btn{padding:0px 3px;margin:2px;border:1px solid #666;color:#666;}
+#g-goods .info .lists #number{border:1px solid #666;color:#666;}
+	.ext{clear:both;margin-top:30px;}
+	.ext .anchors{margin-bottom:30px;height:25px;border-bottom:2px solid #004929;}
+	.ext .anchors li{float:left;margin-right:5px;}
+	.ext .anchors a{display:block;padding-top:5px;width:80px;line-height:20px;text-align:center;background:#e0ecba;border-radius:5px 5px 0 0;color:#666;}
+	.ext .anchors .cur a{background:#004929;color:#FFF;}
+	#a-info{overflow:hidden;}
+	#a-consult{margin-top:50px;padding:0 30px;}
+	#a-consult .title{line-height:32px;}
+	#a-consult .wrap,#a-consult .lists,#a-consult form,#a-consult form textarea,#a-consult form input{background:#FFF;border:1px solid #666;}
+	#a-consult .wrap{padding:8px;background:#deebb8;}
+	#a-consult .lists{padding:5px;background:}
+	#a-consult .lists li{margin-bottom:5px;padding-bottom:5px;border-bottom:1px dashed #EEE;color:#999;}
+	#a-consult .lists i{font-style:normal;}
+	#a-consult form{padding:30px 60px 10px;}
+	#a-consult form label{float:left;}
+	#a-consult form textarea{width:400px;height:120px;font-size:12px;}
+	#a-consult form p{margin:10px 0;}
+	#a-consult form .f-msg{display:inline;padding-left:5px;}
+	#a-consult form .btns{padding-left:60px;}
+	#a-consult form .btns button{width:92px;height:24px;background:url(images/btn-card.png);border:none;text-indent:-999px;overflow:hidden;}
+	#a-consult form .btns button:hover{background-position:bottom;}
+
+
+#i-prolist li{width:25%;}

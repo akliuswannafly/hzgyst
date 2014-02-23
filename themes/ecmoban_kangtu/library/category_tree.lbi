@@ -1,0 +1,27 @@
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+<div id="category_tree">
+	<div class="title"><i></i>源臻产品</div>
+	<ul class="tree">
+<!--{foreach from=$categories item=cat}-->
+	<li class="c-{$cat.idx}">
+		<a href="{$cat.url}" class="lv1"><i></i>{$cat.name|escape:html}</a>
+		
+		<div class="sub">
+			<!--{foreach from=$cat.cat_id item=child}-->
+			<dl>
+			<dt><a href="{$child.url}" class="lv2">{$child.name|escape:html}</a></dt>
+			<dd>
+				<!--{foreach from=$child.cat_id item=sub}-->
+				<a href="{$sub.url}" class="lv3">{$sub.name|escape:html}</a>
+				<!--{/foreach}-->
+			</dd>
+			</dl>
+			<!--{/foreach}-->
+		</div>
+	</li>
+<!--{/foreach}-->
+	</ul>
+</div>
+
+<div class="blank"></div>

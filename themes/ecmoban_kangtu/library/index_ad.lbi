@@ -1,0 +1,53 @@
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+ 
+<div class="index_ad">
+
+<div style="display:none;">
+<!-- {if $index_ad eq 'sys'} -->
+  <script type="text/javascript">
+  var swf_width=757;
+  var swf_height=378;
+  </script>
+  <script type="text/javascript" src="data/flashdata/{$flash_theme}/cycle_image.js"></script>
+<!-- {elseif $index_ad eq 'cus'} -->
+  <!-- {if $ad.ad_type eq 0} -->
+    <a href="{$ad.url}" target="_blank"><img src="{$ad.content}" width="757" height="378" border="0"></a>
+  <!-- {elseif $ad.ad_type eq 1} -->
+    <object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=7,0,19,0" width="757" height="378">
+      <param name="movie" value="{$ad.content}" />
+      <param name="quality" value="high" />
+      <embed src="{$ad.content}" quality="high" pluginspage="http://www.macromedia.com/go/getflashplayer" type="application/x-shockwave-flash" width="757" height="378"></embed>
+    </object>
+  <!-- {elseif $ad.ad_type eq 2} -->
+    {$ad.content}
+  <!-- {elseif $ad.ad_type eq 3} -->
+    <a href="{$ad.url}" target="_blank">{$ad.content}</a>
+  <!-- {/if} -->
+<!-- {else} -->
+<!-- {/if} -->
+</div>
+
+<script type="text/javascript" src="themes/ecmoban_kangtu/js/jquery-1.7.2.js"></script>
+<div id="IndexBanner" class="banner">
+	<div class="pic" id="pic">
+		<a href="http://www.benlai.com/wllzj_syhd.jsp" target="_blank" style="display: none;"><img src="http://image.benlailife.com/adpicture/banner/banner/lizhijie_guiwei.jpg" alt="" id="sj01"> </a>
+		<a href="http://www.benlai.com/item-8659.html" target="_blank" style="display: none;"><img alt="" id="sj02" src="http://image.benlailife.com/adpicture/banner/banner/yangmei.jpg"> </a>
+		<a href="http://www.benlai.com/item-112.html" target="_blank" style="display: none;"><img alt="" id="sj03" src="http://image.benlailife.com/adpicture/banner/banner/yingtao(da).jpg"> </a>
+		<a href="http://www.benlai.com/item-255.html" target="_blank" style="display: none;"><img alt="" id="sj04" src="http://image.benlailife.com/adpicture/banner/banner/qingyuanji.jpg"> </a>
+		<a href="http://www.benlai.com/swyys_syhd.jsp" target="_blank" style="display: inline;"><img alt="" id="sj05" src="http://image.benlailife.com/adpicture/banner/banner/nuoweisanwenyu.jpg"> </a>
+		<a href="http://www.benlai.com/list-40-41.html" target="_blank" style="display: none;"><img alt="" id="sj06" src="http://image.benlailife.com/adpicture/banner/banner/nailaodazhe.jpg"> </a></div>
+<div class="play">
+<ul id="play">
+    <li><a href="javascript:;" class="">荔枝节升级啦</a></li>
+    <li><a href="javascript:;" class="">基地直供仙居杨梅</a></li>
+    <li><a href="javascript:;" class="">加州大樱桃8折售</a></li>
+    <li><a href="javascript:;" class="">清远鸡特价抢购</a></li>
+    <li><a href="javascript:;" class="on">挪威新鲜三文鱼</a></li>
+    <li><a href="javascript:;" class="">黄油奶酪抢鲜购</a></li>
+</ul>
+</div>
+<script type="text/javascript" src="themes/ecmoban_kangtu/js/ImageBanner.js"></script>
+</div>
+
+</div>
+<div class="blank"></div>

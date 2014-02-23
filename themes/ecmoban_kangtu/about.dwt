@@ -1,0 +1,180 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="Keywords" content="{$keywords}" />
+<meta name="Description" content="{$description}" />
+<!-- TemplateBeginEditable name="doctitle" -->
+<title>{$page_title}</title>
+<link href="{$zythemes}/style2.css" rel="stylesheet" type="text/css" />
+<!-- TemplateEndEditable -->
+<!-- TemplateBeginEditable name="head" -->
+<!-- TemplateEndEditable -->
+<link href="{$ecs_css_path}" rel="stylesheet" type="text/css" />
+<!-- {if $page eq 'about'} -->
+<link href="{$zythemes}/about.css" rel="stylesheet" type="text/css" />
+<!-- {/if} -->
+<!-- {if $page eq 'card'} -->
+<link href="{$zythemes}/card.css" rel="stylesheet" type="text/css" />
+<!-- {/if} -->
+<!-- {if $page eq 'qi'} -->
+<link href="{$zythemes}/help.css" rel="stylesheet" type="text/css" />
+<!-- {/if} -->
+<!-- {if $page eq 'article'} -->
+<link href="{$zythemes}/article.css" rel="stylesheet" type="text/css" />
+<!-- {/if} -->
+
+<script type="text/javascript" src="{$zythemes}/js/jquery-1.7.2.js"></script>
+{insert_scripts files='transport.js,utils.js,common.js'}
+<script type="text/javascript" src="{$zythemes}/js/util.js"></script>
+</head>
+
+<body>
+<!-- #BeginLibraryItem "/library/page_header.lbi" --><!-- #EndLibraryItem -->
+
+<div id="g-main">
+	<div class="w-page">
+	<!--{if $page eq 'about'}-->
+	<!-- #BeginLibraryItem "/library/jidi.lbi" --><!-- #EndLibraryItem -->
+	<!--{else}-->
+<!-- #BeginLibraryItem "/library/category.lbi" --><!-- #EndLibraryItem -->
+    <!--{/if}-->
+		<div class="w-right">
+		<!-- {if $cardid eq '35'} -->
+		
+		<div id="card" class="bm-b">
+<h1 class="bm-title"><i>&nbsp;</i>生态礼卡</h1>
+<div class="bm-cnt">
+<div><img src="themes/zylinkus_com/images/info/card2-t.png" alt=""></div>
+<div class="b1">
+<p>源臻精选各种优质商品，推出8 选1 生态食品卡(<a href="#1">2998元</a>、<a href="#2">1998元</a>、<a href="#3">1198元</a>、<a href="#4">898元</a>、<a href="#5">598元</a>、<a href="#6">398元</a>、<a href="#7">298元</a>) 系列，包含有机蔬菜、进口水果、阳澄湖大闸蟹、云南野生菌、意大利进口橄榄油、法国进口红酒、环球海鲜等产品，希望为更多的企业和家庭提供健康美味的食品和周到贴心的宅配服务。</p>
+<p style="font:24px/40px Simhei,Arial;color:#00612a;">企业团购业务，请咨询源臻客户经理</p>
+<p style="font:24px/40px Simhei,Arial;color:#00612a;"><span style="font-size: large;">北京地区: 沈女士&nbsp; 18611698848<br />
+</span></p>
+<p style="font:24px/40px Simhei,Arial;color:#00612a;"><span style="font-size: large;">其他地区: 孙先生&nbsp; 13651816501 </span><br />
+或致电服务热线:<b style="font-size:36px;">400-066-0646</b></p>
+</div>
+<div class="b1"><img alt="" src="themes/zylinkus_com/images/info/card2-m2.png"></div>
+<!-- {foreach from=$category_goods item=cat} -->
+<div class="table">
+<p class="title"><a name="7">{$cat.name}</a></p>
+<table>
+    <tbody>
+	<!-- {foreach from=$cat.goods item=goods} -->
+        <tr>
+            <td class="g-1">{$goods.goods_sn}</td>
+            <td class="g-2">{$goods.goods_name}<br />{$goods.goods_brief}</i>
+			<div class="btns"><!--<a class="btn-exc" href="javascript:addCardToCart('{$goods.goods_id}')">换购</a>--></div>
+			</td>
+            <td class="g-3">{$goods.seller_note}</td>
+        </tr>
+	<!-- {/foreach} -->
+    </tbody>
+</table>
+</div>
+<!-- {/foreach} -->
+
+</div>
+</div>
+<!-- {elseif $cardid eq '57'} -->
+<div id="card" class="bm-b">
+<h1 class="bm-title"><i>&nbsp;</i>生态礼卡</h1>
+<div class="bm-cnt">
+<div style="width:300px;float:left;">
+<br />
+<br />
+<br />
+<br />
+<img src="themes/zylinkus_com/images/card/card4.jpg" alt="">
+</div>
+<div style="height:190px;float:left;">
+<img src="themes/zylinkus_com/images/card/card4-2.jpg" alt="">
+</div>
+<div style="clear:both;"></div>
+<div class="b1">
+<p style="font:24px/40px Simhei,Arial;color:#00612a;"><span style="font-size: large;">源选择源臻生态有机春茶的4大理由</span></p>
+<p>源臻杭州梅家坞、苏州洞庭山、安吉九龙山、福鼎嵛山岛四大茶园基地分别直供精制特选西湖龙井、洞庭碧螺春、安吉白茶、福鼎白茶等四款上等春茶，为您从每款茶的故乡宗源带来最放心、最营养的健康茶、精品茶，经权威机构认证，皆为茶中上品，品来回味悠长，不容错过。</p>
+<p>
+<span style="font-size: large;color:#00612a;">最佳产地：</span>源臻拥有西湖龙井、洞庭碧螺春、安吉白茶、福鼎白茶4 大名茶原产地基地，分别
+地处各名茶最佳产区的核心区域，出产茶款均属佳中上品。</p>
+<p>
+<span style="font-size: large;color:#00612a;">源头直供：</span>源臻为您从名茶原产基地直供货源，减少中间环节，给您带来最完美的品质和最新
+鲜的体验。</p>
+<p>
+<span style="font-size: large;color:#00612a;">权威保障：</span>源臻向您保证每一款茶叶都具备相关有机认证或国家地理标志认证，限量供应，确
+保正宗。</p>
+<p>
+<span style="font-size: large;color:#00612a;">专业品质：</span>源臻从采摘，炒制，包装到物流全产业链层层监控把关，专业的制茶经验更使得每
+一款茶叶都成为精品，充分体现了“源产地 臻品质”的理念。
+从茶园基地到您的茶杯，源臻为您用心一路呵护！
+</p>
+</div>
+<!-- {foreach from=$category_goods item=cat} -->
+<div class="table">
+<p class="title"><a name="7">{$cat.name}</a></p>
+<table>
+    <tbody>
+	<!-- {foreach from=$cat.goods item=goods} -->
+        <tr>
+            <td class="g-1">{$goods.goods_brief}</td>
+            <td class="g-2">{$goods.goods_name}<br /></i>
+			</td>
+            <td class="g-3">{$goods.seller_note}</td>
+        </tr>
+	<!-- {/foreach} -->
+    </tbody>
+</table>
+</div>
+<!-- {/foreach} -->
+
+<div class="b1">
+<p>
+<span style="font-size: large;color:#00612a;">
+源臻生态有机6选1春茶卡使用说明：</span></p>
+<p>
+1、本卡盖章有效，凭有效卡号、密码预约配送。</p>
+<p>2、本卡不能兑换现金，不找零，一次性使用。</p>
+<p>3、请拨打源臻服务热线400-066-0646预约配送，选择卡内产品组合中的一种，请提前两天预约。注：如遇节假日请提前预定。</p>
+<p>4、西湖龙井/洞庭碧螺春/安吉白茶/福鼎白茶春茶采摘时间为3.25~4.20，安溪有机铁观音春茶采摘时间为4.28~5.20。</p>
+<p>5、因春茶采摘时间较短，产量有限，个别单品可能出现暂时性缺货。如遇缺货或原品下市，源臻有权为您更换同价格品种，不因此承担补偿责任。详情请咨询源臻服务热线。</p>
+<p>6、热线服务时间为工作日9:00~20:00，双休日9:00~18:00，节假日服务时间将有所调整。</p>
+<p>7、本卡有效期为8个月。</p>
+<p>8、以上茶叶礼盒全国范围免费配送（港澳台地区除外）。海外及其他地区配送请咨询源臻热线：400-066-0646</p>
+<p>9、本卡最终解释权归上海源臻堂生态科技有限公司所有。</p>
+</div>
+
+</div>
+
+</div>
+		<!-- {else} -->
+			{$article.content}
+		<!-- {/if} -->
+		</div>
+		<div class="cf"></div>
+	</div>
+</div>
+
+<!-- #BeginLibraryItem "/library/page_footer.lbi" --><!-- #EndLibraryItem -->
+<div id="hl-cid" style="display:none;">
+	<form name="cardreg" onsubmit="return cardReg();">
+	<div class="title">为了更好的为您服务，请填写以下信息！</div>
+	<div class="zone1">
+		<p>您的信息及联系方式：</p>
+		<label><b>姓&nbsp;&nbsp;&nbsp;&nbsp;名：</b><input type="text" name="cname" /> <i>*</i></label>
+		<label><b>固定电话：</b><input type="text" name="ctel" /></label>
+		<label><b>手机号码：</b><input type="text" name="cmobile" /> <i>*</i></label>
+		<label><b>电子邮件：</b><input type="text" name="cmail" /></label>
+		<p>我们将严格执行隐私保护政策，您的信息将只用于网站交易和沟通等相关方使用，
+以满足您的订单等购物服务；</p>
+	</div>
+	<div class="title">请填写您所持有的食品卡的卡号及密码：</div>
+	<div class="zone2">
+		<label><b>卡号：</b><input type="text" name="cid" /></label>
+		<label><b>密码：</b><input type="password" name="cpass" /></label>
+	</div>
+	<div id="cAlert"></div>
+	<div class="btns"><button type="submit" class="btn">进入换购</button></div>
+	</form>
+</div>
+</body>
+</html>

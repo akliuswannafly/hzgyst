@@ -1,0 +1,352 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="Keywords" content="{$keywords}" />
+<meta name="Description" content="{$description}" />
+<!-- TemplateBeginEditable name="doctitle" -->
+<title>{$page_title}</title>
+<!-- TemplateEndEditable -->
+<!-- TemplateBeginEditable name="head" -->
+<!-- TemplateEndEditable -->
+<link href="{$ecs_css_path}" rel="stylesheet" type="text/css" />
+<link href="{$zythemes}/order.css" rel="stylesheet" type="text/css" />
+<link href="{$zythemes}/js/colorbox/colorbox.css" type="text/css" />
+<script type="text/javascript" src="{$zythemes}/js/jquery-1.7.2.js"></script>
+<script type="text/javascript" src="{$zythemes}/js/colorbox/jquery.colorbox.js"></script>
+<script type="text/javascript" src="{$zythemes}/js/util.js"></script>
+</head>
+
+<body>
+<!-- #BeginLibraryItem "/library/page_header.lbi" --><!-- #EndLibraryItem -->
+
+<div id="g-main">
+	<div class="w-page">
+        <!-- {if $step eq "cart"} -->
+            {insert_scripts files='showdiv.js'}
+            <script type="text/javascript">
+                    {foreach from=$lang.password_js item=item key=key}
+                    var {$key} = "{$item}";
+                    {/foreach}
+            </script>
+		<div id="cart">
+			<div id="steps">
+				<span>购买流程：</span>
+				<span class="step hover"><i>1</i>我的购物车</span> ——
+				<span class="step"><i>2</i>填写校对订单信息</span> ——
+				<span class="step"><i>3</i>提交订单</span>
+			</div>
+			
+			<form id="cart-lists">
+				<div class="table">
+				<table>
+				<thead><tr><td>货号</td><td width="100">产品</td><td width="200">规格</td><td>发货地</td><td>配送时间</td></tr></thead>
+				<tbody>
+                <!-- {foreach from=$goods_list item=goods} -->
+					<tr>
+                        <td class="pid">{$goods.goods_sn}</td>
+                        <td class="pname" width="100">{$goods.goods_name}</td>
+                        <td class="punit">{$goods.goods_brief}</td>
+						<td class="pfrom">上海市</td>
+						<td class="ptime">24小时</td>
+                    </tr>
+				<!--{/foreach}-->
+				<!-- {foreach from=$goods_list item=goods} -->
+				<tr>
+				<td colspan="6">
+				感谢您选择了{$goods.goods_name}，礼盒包含以下产品：
+				<b>{$goods.goods_brief}</b>
+				</td>
+				</tr>
+				<!--{/foreach}-->
+                </tbody>
+				</table>
+				</div>
+				
+				<div class="btns">
+					<a href="index.php" class="btn-anchor btn-style2">重新选择</a>
+					<a href="cardbuy.php?step=checkout" class="btn-anchor">下一步</a>
+
+				</div>
+			</form>
+		</div>
+        <!-- {/if} -->
+		<!-- {if $step eq "login"} -->
+		<link href="{$zythemes}/reg.css" rel="stylesheet" type="text/css" />
+		        {insert_scripts files='utils.js,user.js'}
+        <script type="text/javascript">
+        {foreach from=$lang.flow_login_register item=item key=key}
+          var {$key} = "{$item}";
+        {/foreach}
+
+        {literal}
+        function checkLoginForm(frm) {
+          if (Utils.isEmpty(frm.elements['username'].value)) {
+            alert(username_not_null);
+            return false;
+          }
+
+          if (Utils.isEmpty(frm.elements['password'].value)) {
+            alert(password_not_null);
+            return false;
+          }
+
+          return true;
+        }
+
+        function checkSignupForm(frm) {
+          if (Utils.isEmpty(frm.elements['username'].value)) {
+            alert(username_not_null);
+            return false;
+          }
+
+          if (Utils.trim(frm.elements['username'].value).match(/^\s*$|^c:\\con\\con$|[%,\'\*\"\s\t\<\>\&\\]/))
+          {
+            alert(username_invalid);
+            return false;
+          }
+
+          if (Utils.isEmpty(frm.elements['email'].value)) {
+            alert(email_not_null);
+            return false;
+          }
+
+          if (!Utils.isEmail(frm.elements['email'].value)) {
+            alert(email_invalid);
+            return false;
+          }
+
+          if (Utils.isEmpty(frm.elements['password'].value)) {
+            alert(password_not_null);
+            return false;
+          }
+
+          if (frm.elements['password'].value.length < 6) {
+            alert(password_lt_six);
+            return false;
+          }
+
+          if (frm.elements['password'].value != frm.elements['confirm_password'].value) {
+            alert(password_not_same);
+            return false;
+          }
+          return true;
+        }
+        {/literal}
+        </script>
+				<div id="g-reg">
+			<ul class="js-tabs">
+			<li><a href="#a-reg" >新用户注册</a></li>
+			<li><a href="#a-log" class="hover">用户登录</a></li>
+			<li><a href="#a-findpass">找回密码</a></li>
+			</ul>
+			
+			<div id="a-reg" class="js-tab">
+				<div id="a-rule" class="b-innershadow">
+				<!-- #BeginLibraryItem "/library/rule.lbi" --><!-- #EndLibraryItem -->	
+				</div>
+
+				<form action="flow.php?step=login" method="post" name="formUser" id="registerForm" onsubmit="return checkSignupForm(this)">
+				<ul>
+					<li><label class="f-label">用&nbsp;户&nbsp;名：</label><input type="text" class="f-in" name="username" /></li>
+					<li><label class="f-label">密&nbsp; &nbsp; 码：</label><input type="password" class="f-in" name="password"  /></li>
+					<li><label class="f-label">确认密码：</label><input type="password" class="f-in" name="confirm_password" /></li>
+					<li><label class="f-label">电子邮件：</label><input type="text" class="f-in" name="email" /></li>
+					<li><label class="f-label">性&nbsp; &nbsp; 别：</label><input type="radio" class="f-radio" value="1" name="sex" checked />男 <input type="radio" class="f-radio" value="2" name="sex" />女</li>
+					<li style="display:none"><label class="f-label">职&nbsp; &nbsp; 业：</label><select class="f-sl">
+						<option>选择职业</option>
+						<option>职业1</option>
+						<option>职业2</option>
+					</select></li>
+					<li style="display:none"><label class="f-label">现&nbsp; &nbsp; 居：</label><select class="f-ss">
+						<option>选择省份</option>
+						<option>省份1</option>
+						<option>省份2</option>
+					</select><select class="f-ss">
+						<option>选择城市</option>
+						<option>城市1</option>
+						<option>城市2</option>
+					</select></li>
+					<li><label class="checkrule"><input type="checkbox" checked="checked" class="f-check" name="agreement" />我已阅读并接受<a href="#a-rule">用户注册协议</a></label></li>
+					<input name="act" type="hidden" value="signup" />
+          <input type="hidden" name="back_act" value="{$back_act}" />
+					<li class="btns">
+					<input type="submit" name="submit" value="注册"	 class="btn" />
+					</li>
+				</ul>
+				</form>
+			</div>
+
+			<div id="a-log" >
+			<form action="flow.php?step=login" method="post" name="loginForm" id="loginForm" onsubmit="return checkLoginForm(this)">
+				<ul>
+				<li><label for="fname" class="f-label">用 户 名：</label><input type="text" class="f-in" name="username" /></li>
+				<li><label for="fpass" class="f-label">密&nbsp; &nbsp; 码：</label><input type="password" name="password" class="f-in" /></li>
+				<li style="margin:16px 0;">
+					<label id="logstat"><input type="checkbox" class="f-check" name="remember" checked /><i></i><span>记住我</span></label>
+					<span class="b2"><a href="user.php?act=get_password" target="_top">忘记密码？点击这里寻找</a></span>
+					<span class="b3"><a href="user.php?act=register" target="_top">免费注册</a></span>
+				</li>
+				<input name="act" type="hidden" value="signin" />
+            <input type="hidden" name="back_act" value="{$back_act}" />
+				<li class="btns">
+				<input type="submit" name="submit" class="btn" value="登录" />
+				</li>
+				</ul>
+				</form>
+			</div>
+			
+			<div id="a-findpass" class="js-tab">
+				<form>
+				<ul>
+				<li><label for="fname" class="f-label">电子邮件：</label><input type="text" name="fname" class="f-in" /></li>
+				<li><label for="fpass" class="f-label">重复输入：</label><input type="password" name="fpass" class="f-in" /></li>
+				<li class="f-msg">请输入您注册时填写的Email，系统将发送邮件到此地址帮您找回密码。</li>
+				<li class="btns"><button type="submit" class="btn">找回</button></li>
+				</ul>
+				</form>
+			</div>
+		</div>
+		<!-- {/if} -->
+        <!-- {if $step eq "consignee"} -->
+        <!-- 开始收货人信息填写界面 -->
+            {insert_scripts files='region.js,utils.js'}
+        <script type="text/javascript">
+            region.isAdmin = false;
+                {foreach from=$lang.flow_js item=item key=key}
+                var {$key} = "{$item}";
+                {/foreach}
+
+                {literal}
+                onload = function() {
+                    if (!document.all)
+                    {
+                        document.forms['theForm'].reset();
+                    }
+                }
+                {/literal}
+        </script>
+        <!-- 如果有收货地址，循环显示用户的收获地址 -->
+                <!-- {foreach from=$consignee_list item=consignee key=sn} -->
+            <form action="flow.php" method="post" name="theForm" id="theForm" onsubmit="return checkConsignee(this)">
+                <!-- #BeginLibraryItem "/Library/consignee.lbi" --><!-- #EndLibraryItem -->
+            </form>
+                    <!-- {/foreach} -->
+        <!-- {/if} -->
+        <!-- {if $step eq "checkout"} 开始订单确认界面 -->
+		{insert_scripts files='region.js,utils.js'}
+		{insert_scripts files='utils.js,transport.js'}
+        <script type="text/javascript">
+          region.isAdmin = false;
+          {foreach from=$lang.flow_js item=item key=key}
+          var {$key} = "{$item}";
+          {/foreach}
+
+          {literal}
+          onload = function() {
+            if (!document.all)
+            {
+              document.forms['theForm'].reset();
+            }
+          }
+          {/literal}
+		  </script>
+        <div id="cart">
+            <div id="steps">
+                <span>购买流程：</span>
+                <span class="step"><i>1</i>我的购物车</span> ——
+                <span class="step hover"><i>2</i>填写校对订单信息</span> ——
+                <span class="step"><i>3</i>提交订单</span>
+            </div>
+
+                <form action="cardbuy.php" method="post" name="theForm" id="order-input" onsubmit="return checkOrderForm(this)">
+				<div class="bm-b">
+					<div class="title">订货人信息</div>
+					<div class="bm-cnt">
+						<ul>
+						<li class="line"><i>*</i><label>订货人姓名：</label><input type="text" class="f-in" name="song_consignee" /></li>
+						<li class="line"><label>固定电话：</label><input type="text" class="f-in" name="song_tel" /></li>
+						<li class="line"><i>*</i><label>手机号码：</label><input type="text" class="f-in" name="song_mobile" /></li>
+						</ul>
+					</div>
+				</div>
+				<div class="bm-b">
+					<div class="title">收货人信息</div>
+					<div class="bm-cnt">
+						<ul>
+						<li class="line"><i>*</i><label>收货人姓名：</label><input type="text" class="f-in" name="consignee" /></li>
+						<li class="line"><label>固定电话：</label><input type="text" class="f-in" name="tel" /></li>
+						<li class="line"><i>*</i><label>手机号码：</label><input type="text" class="f-in" name="mobile" /></li>
+						<li><i>*</i><label>所在地区：</label>
+						<select name="country" id="selCountries_{$sn}" onchange="region.changed(this, 1, 'selProvinces_1')">
+        <option value="0">{$lang.please_select}{$name_of_region[0]}</option>
+        <option value="1" >中 国</option>
+      </select>
+      <select name="province" id="selProvinces_1" onchange="region.changed(this, 2, 'selCities_1')">
+        <option value="0">{$lang.please_select}{$name_of_region[1]}</option>
+        <!-- {foreach from=$province_list.$sn item=province} -->
+        <option value="{$province.region_id}" {if $consignee.province eq $province.region_id}selected{/if}>{$province.region_name}</option>
+        <!-- {/foreach} -->
+      </select>
+      <select name="city" id="selCities_1" onchange="region.changed(this, 3, 'selDistricts_1')">
+        <option value="0">{$lang.please_select}{$name_of_region[2]}</option>
+        <!-- {foreach from=$city_list.$sn item=city} -->
+        <option value="{$city.region_id}" {if $consignee.city eq $city.region_id}selected{/if}>{$city.region_name}</option>
+        <!-- {/foreach} -->
+      </select>
+      <select name="district" id="selDistricts_1" {if !$district_list.$sn}style="display:none"{/if}>
+        <option value="0">{$lang.please_select}{$name_of_region[3]}</option>
+        <!-- {foreach from=$district_list.$sn item=district} -->
+        <option value="{$district.region_id}" {if $consignee.district eq $district.region_id}selected{/if}>{$district.region_name}</option>
+        <!-- {/foreach} -->
+      </select>
+    {$lang.require_field} 
+						
+						</li>
+						<li><i>*</i><label>详细地址：</label> <input type="text" class="f-in f-address" name="address" /><span class="f-msg">例如：云岭东路89号长风国际大厦1905室</span></li>
+						<li><i>&nbsp;</i><label>邮政编码：</label> <input type="text" class="f-in" name="zipcode" /></li>
+						</ul>
+					</div>
+				</div>
+
+
+                <div class="btns">
+                    <input type="hidden" name="step" value="done" />
+                    <button type="submit" class="btn-anchor">提交订单</button>
+                    <a href="index.php" class="btn-anchor btn-style2">继续购物</a>
+                </div>
+            </form>
+        </div>
+        <!-- {/if} -->
+    <!-- {if $step eq "done"} -->
+    <div id="cart">
+        <div id="steps">
+            <span>购买流程：</span>
+            <span class="step"><i>1</i>我的购物车</span> ——
+            <span class="step"><i>2</i>填写校对订单信息</span> ——
+            <span class="step hover"><i>3</i>提交订单</span>
+        </div>
+
+        <div id="order-finish">
+            <div class="title">恭喜，您的换购已在处理中</div>
+            <div id="order-info">
+                <p style="display:none;">订单号：<b>{$order.order_sn}</b></p>
+				<br />
+                <p>如有疑问请咨询源臻客户经理<br />
+                    或致电服务热线：<b class="phone">400-066-0646</b></p>
+            </div>
+            <div class="btns">
+				<!-- {if $pay_online} -->
+				{$pay_online}
+				<!--{/if}-->
+            </div>
+        </div>
+    </div>
+    <!-- {/if} -->
+	</div>
+</div>
+
+<!-- #BeginLibraryItem "/library/page_footer.lbi" --><!-- #EndLibraryItem -->
+
+</body>
+</html>

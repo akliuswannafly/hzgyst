@@ -1,0 +1,53 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="Keywords" content="{$keywords}" />
+<meta name="Description" content="{$description}" />
+<!-- TemplateBeginEditable name="doctitle" -->
+<title>源臻生态食品卡</title>
+<!-- TemplateEndEditable -->
+<!-- TemplateBeginEditable name="head" -->
+<!-- TemplateEndEditable -->
+<link href="{$ecs_css_path}" rel="stylesheet" type="text/css" />
+<link href="themes/zylinkus_com/card.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="{$zythemes}/js/jquery-1.7.2.js"></script>
+{insert_scripts files='transport.js,utils.js'}
+<script type="text/javascript" src="{$zythemes}/js/util.js"></script>
+</head>
+
+<body>
+<!-- #BeginLibraryItem "/library/page_header.lbi" --><!-- #EndLibraryItem -->
+<div id="g-main">
+	<div class="w-page">
+	<!-- #BeginLibraryItem "/library/category.lbi" --><!-- #EndLibraryItem -->
+			<div class="w-right">			
+			<div id="card" class="bm-b">
+				<h1 class="bm-title"><i></i>欢迎您！</h1>
+				<div class="bm-cnt">
+					<div class="photo"><img src="images/info/card1-m.png" /></div>
+					
+					
+					<div class="b3">
+						<p>感谢您使用源臻生态食品卡</p>
+						<p>您的卡号为：<b>{$user.card_name}</b></p>
+						<p>您的卡内剩余金额为：<b>{$user.free_money}</b>元</p>
+						<p>您还有<b>{$user.count}</b>次换购机会</p>
+					</div>
+						
+					<div class="b4">
+						<p>每次换购满300元免费配送，不足300元需收取一定金额配送费用，详情请咨询源臻客服热线：<b class="phone">400-066-0646</b></p>	
+					</div>
+
+					<div class="cf"></div>
+					
+					<div class="b5">
+						<a href="index.php"><button type="button" class="btn-buy">点击购买</button></a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="cf"></div>
+	</div>
+</div>
+<!-- #BeginLibraryItem "/library/page_footer.lbi" --><!-- #EndLibraryItem -->

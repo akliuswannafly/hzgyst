@@ -1,0 +1,66 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="Keywords" content="{$keywords}" />
+<meta name="Description" content="{$description}" />
+<!-- TemplateBeginEditable name="doctitle" -->
+<title>{$page_title}</title>
+<link href="{$zythemes}/style2.css" rel="stylesheet" type="text/css" />
+<!-- TemplateEndEditable -->
+<!-- TemplateBeginEditable name="head" -->
+<!-- TemplateEndEditable -->
+<link href="{$zythemes}/product.css" rel="stylesheet" type="text/css" />
+<link href="{$ecs_css_path}" rel="stylesheet" type="text/css" />
+<link href="{$zythemes}/js/colorbox/colorbox.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="{$zythemes}/js/jquery-1.7.2.js"></script>
+<script type="text/javascript" src="{$zythemes}/js/colorbox/jquery.colorbox.js"></script>
+<script type="text/javascript" src="{$zythemes}/js/util.js"></script>
+</head>
+
+<body>
+<!-- #BeginLibraryItem "/library/page_header.lbi" --><!-- #EndLibraryItem -->
+<div id="g-main">
+	<div class="w-page">
+<!-- #BeginLibraryItem "/library/category.lbi" --><!-- #EndLibraryItem -->
+		<div class="w-right">
+			<div id="a-about" class="bm-h">
+				<h1 class="bm-title"><i></i>源臻产品</h1>
+				<div class="bm-cnt img-wrap">
+					<div class="img-cnt">
+						<img src="{$zythemes}/images/info/promain.jpg" />
+					</div>
+				</div>
+			</div>
+
+			<div id="g-product" class="bm-b">
+			<!-- {foreach from=$product_main item=goods} -->
+				<div>
+					<h2 class="c-{$goods.idx} bm-title"><p><i></i>{$goods.cat.cat_name}</p><a href="category.php?id={$goods.cat.cat_id}" class="more">&gt;&gt;more</a></h2>
+					<div>
+						<ul class="lists">
+						<!-- {foreach from=$goods.goods item=good} -->
+						<li>
+							<div class="p-list">
+								<div class="pic"><a href="{$good.url}"><img src="{$good.thumb}" title="{$good.name}" /></a></div>
+								<a href="{$good.url}" class="pname">{$good.short_name}</a>
+								<div class="price">
+									<del>{$good.market_price}</del>
+									<b>{$good.shop_price}</b>
+								</div>
+							</div>
+						</li>
+						<!-- {/foreach} -->
+						</ul>
+					</div>
+				</div>
+			<!-- {/foreach} -->
+
+			</div>
+		</div>
+		<div class="cf"></div>
+	</div>
+</div>
+<!-- #BeginLibraryItem "/library/page_footer.lbi" --><!-- #EndLibraryItem -->
+</body>
+</html>

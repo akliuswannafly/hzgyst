@@ -1,0 +1,95 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="Keywords" content="Key" />
+<title>Title</title>
+<link href="style.css" rel="stylesheet" type="text/css" />
+<style type="text/css">
+body{margin:auto;background:#F0F0F0;overflow:hidden;}
+div{font-size:12px;}
+li{list-style:none;}
+
+#IndexBanner{height:400px;margin-top:3px;}
+#IndexBanner #pic{height:375px; overflow:hidden;}
+#IndexBanner .play{background:#F0F0F0;height:33px;}
+#IndexBanner .play ul{margin:0;padding:0;}
+#IndexBanner .play li{float:left;width:151px;}
+#IndexBanner .play a{
+	background: url(images/banner_tb02.gif) 8px 14px no-repeat;
+	display: block;
+	height: 23px;
+	padding: 10px 0px 0px 22px;
+	color: #333;
+	text-decoration: none;
+}
+#IndexBanner .play a.on{
+	width: 140px;
+	background: url(images/banner_tb01.gif) 7px 14px no-repeat #fff;
+	height: 22px;
+	color: #ff9425;
+	border:1px solid #eaeae8;
+	border-top:none;
+}
+</style>
+<script type="text/javascript" src="themes/ecmoban_kangtu/js/jquery-1.7.2.js"></script>
+  <script type="text/jaascript">
+  //首页焦点图切换JS
+var n=0;
+var showNum = document.getElementById("num");
+function Mea(value){
+	n=value;
+	setBg(value);
+	plays(value);
+	}
+function setBg(value){
+	for(var i=0;i<4;i++){
+	   if(value==i){
+	     document.getElementById("a"+value).className='act';      
+			}	else{	
+			 document.getElementById("a"+i).className='nor';
+			}  
+	} 
+}
+function plays(value){ 
+		 for(i=0;i<4;i++){
+			  if(i==value){			  
+			  	document.getElementById("pc_"+value).style.display="block";
+			  }else{
+			    document.getElementById("pc_"+i).style.display="none";			    
+			  }			
+		}	
+}
+function clearAuto(){clearInterval(autoStart)}
+function setAuto(){autoStart=setInterval("auto(n)", 3000)}
+function auto(){
+	n++;
+	if(n>3)n=0;
+	Mea(n);
+} 
+function sub(){
+	n--;
+	if(n<0)n=3;
+	Mea(n);
+} 
+setAuto(); 
+</script> 
+<div id="IndexBanner" class="banner">
+	<div class="pic" id="pic">
+	<!-- {foreach from=$xml_info item=xml} -->
+		<A href="{$xml.link}" target="_blank"><IMG id="pc_{$xml.sort}" src="{$xml.item_url}"></A> 
+	<!-- {/foreach} -->
+</div>
+<div class="play">
+<ul id="play">
+<!-- {foreach from=$xml_info item=xml} -->
+<li>
+	<A href="{$xml.item_url}" target="_blank" class="nor" id="a{$xml.sort}" onclick="Mea({$xml.sort})" onmouseover="Mea({$xml.sort})" onmouseout="clearAuto();setAuto()">{$xml.text}</A></li>
+<!-- {/foreach} -->
+</ul>
+</div>
+<script type="text/javascript" src="themes/ecmoban_kangtu/js/ImageBanner.js"></script>
+</div>
+
+</body>
+</html>
