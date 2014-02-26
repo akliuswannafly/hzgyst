@@ -1,0 +1,35 @@
+﻿<!DOCTYPE html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="JS代码,幻灯片,相册,图片展示,mootools,JS图片特效,JS广告代码，JS常用代码" />
+<meta name="description" content="mootools实现的带缩略图的幻灯片展示效果，更多幻灯片,相册,图片展示,mootools代码请访问脚本之家JS代码频道。" />
+<title>mootools实现的带缩略图的幻灯片展示效果_脚本之家</title>
+<link rel="stylesheet" type="text/css" href="css/slideshow.css" media="screen" />
+	<script type="text/javascript" src="js/mootools.js"></script>
+	<script type="text/javascript" src="js/slideshow.js"></script>
+	<script type="text/javascript">		
+	//<![CDATA[
+	  window.addEvent('domready', function(){
+	    var data = {
+	      '1.jpg': { caption: 'Volcano Asención in Ometepe, Nicaragua.' }, 
+	      '2.jpg': { caption: 'A Ceibu tree.' }, 
+	      '3.jpg': { caption: 'The view from Volcano Maderas.' }, 
+	      '4.jpg': { caption: 'Beer and ice cream.' }
+	    };
+	    var myShow = new Slideshow('show', data, {controller: true, height: 300, hu: 'images/', thumbnails: true, width: 400});
+	  });
+	//]]>
+	</script>
+</head>
+<body>
+  <div id="show" class="slideshow">
+    <img src="images/1.jpg" alt="Volcano Asención in Ometepe, Nicaragua." />
+  </div>
+  
+  <br><br><br><Br><br><br>
+
+<div style="text-align:center; clear:both; margin:5px auto">
+
+</div>
+</body>
+</html>

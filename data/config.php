@@ -14,7 +14,7 @@ $db_pass   = "lxysqlstart";
 // table prefix
 $prefix    = "ecs_";
 
-$timezone    = "PRC";
+$timezone    = "UTC";
 
 $cookie_path    = "/";
 
@@ -30,6 +30,6 @@ define('AUTH_KEY', 'this is a key');
 
 define('OLD_AUTH_KEY', '');
 
-define('API_TIME', '2014-02-23 19:34:35');
+define('API_TIME', '2014-02-26 08:36:26');
 
 ?>
