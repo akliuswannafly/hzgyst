@@ -30,22 +30,11 @@ function moveElement(elementID,final_x,final_y,interval) {
   if (xpos == final_x && ypos == final_y) {
 		return true;
   }
-  if (xpos < final_x) {
-    var dist = Math.ceil((final_x - xpos)/10);
-    xpos = xpos + dist;
-  }
-  if (xpos > final_x) {
-    var dist = Math.ceil((xpos - final_x)/10);
-    xpos = xpos - dist;
-  }
-  if (ypos < final_y) {
-    var dist = Math.ceil((final_y - ypos)/10);
-    ypos = ypos + dist;
-  }
-  if (ypos > final_y) {
-    var dist = Math.ceil((ypos - final_y)/10);
-    ypos = ypos - dist;
-  }
+  var dist = Math.ceil((final_x - xpos)/10);
+  xpos = xpos + dist;
+  dist = Math.ceil((final_y - ypos)/10);
+  ypos = ypos + dist;
+
   elem.style.left = xpos + "px";
   elem.style.top = ypos + "px";
   var repeat = "moveElement('"+elementID+"',"+final_x+","+final_y+","+interval+")";
@@ -74,44 +63,17 @@ function iFocusChange() {
 	$('ifocus').onmouseout = function(){atuokey = false};
 	var iFocusBtns = $('ifocus_btn').getElementsByTagName('li');
 	var listLength = iFocusBtns.length;
-	iFocusBtns[0].onmouseover = function() {
-		moveElement('ifocus_piclist',0,0,5);
-		classNormal('ifocus_btn','ifocus_tx');
-		classCurrent('ifocus_btn','ifocus_tx',0);
-	}
-	if (listLength>=2) {
-		iFocusBtns[1].onmouseover = function() {
-			moveElement('ifocus_piclist',0,-300,5);
-			classNormal('ifocus_btn','ifocus_tx');
-			classCurrent('ifocus_btn','ifocus_tx',1);
-		}
-	}
-	if (listLength>=3) {
-		iFocusBtns[2].onmouseover = function() {
-			moveElement('ifocus_piclist',0,-600,5);
-			classNormal('ifocus_btn','ifocus_tx');
-			classCurrent('ifocus_btn','ifocus_tx',2);
-		}
-	}
-	if (listLength>=4) {
-		iFocusBtns[3].onmouseover = function() {
-			moveElement('ifocus_piclist',0,-900,5);
-			classNormal('ifocus_btn','ifocus_tx');
-			classCurrent('ifocus_btn','ifocus_tx',3);
-		}
-	}
-	if (listLength>=5) {
-		iFocusBtns[4].onmouseover = function() {
-			moveElement('ifocus_piclist',0,-1200,5);
-			classNormal('ifocus_btn','ifocus_tx');
-			classCurrent('ifocus_btn','ifocus_tx',4);
-		}
-	}
-	if (listLength>=6) {
-		iFocusBtns[5].onmouseover = function() {
-			moveElement('ifocus_piclist',0,-1500,5);
-			classNormal('ifocus_btn','ifocus_tx');
-			classCurrent('ifocus_btn','ifocus_tx',5);
+	for(var it = 0;it < listLength; it++)
+	{
+		if(listLength >= it+1)
+		{
+			iFocusBtns[it].onmouseover = (function(it){
+					return function (){
+						moveElement('ifocus_piclist',0,-300*it,5);
+						classNormal('ifocus_btn','ifocus_tx');
+						classCurrent('ifocus_btn','ifocus_tx',it);
+					};
+			})(it);
 		}
 	}
 }
@@ -126,36 +88,16 @@ function autoiFocus() {
 	for(var i=0; i<listLength; i++) {
 		if (focusBtnList[i].className == 'current') var currentNum = i;
 	}
-	if (currentNum==0&&listLength!=1 ){
-		moveElement('ifocus_piclist',0,-300,5);
-		classNormal('ifocus_btn','ifocus_tx');
-		classCurrent('ifocus_btn','ifocus_tx',1);
+	for(var it = 0;it < listLength; it++)
+	{
+		if(currentNum == it )
+		{
+			moveElement('ifocus_piclist',0,-300*((it+1)%listLength),5);
+			classNormal('ifocus_btn','ifocus_tx');
+			classCurrent('ifocus_btn','ifocus_tx',(it+1)%listLength);
+			break;
+		}
 	}
-	if (currentNum==1&&listLength!=2 ){
-		moveElement('ifocus_piclist',0,-600,5);
-		classNormal('ifocus_btn','ifocus_tx');
-		classCurrent('ifocus_btn','ifocus_tx',2);
-	}
-	if (currentNum==2&&listLength!=3 ){
-		moveElement('ifocus_piclist',0,-900,5);
-		classNormal('ifocus_btn','ifocus_tx');
-		classCurrent('ifocus_btn','ifocus_tx',3);
-	}
-	if (currentNum==3&&listLength!=4  ){
-		moveElement('ifocus_piclist',0,-1200,5);
-		classNormal('ifocus_btn','ifocus_tx');
-		classCurrent('ifocus_btn','ifocus_tx',4);
-	}
-	if (currentNum==4&&listLength!=5 ){
-		moveElement('ifocus_piclist',0,-1500,5);
-		classNormal('ifocus_btn','ifocus_tx');
-		classCurrent('ifocus_btn','ifocus_tx',5);
-	}
-	if (currentNum==5){
-		moveElement('ifocus_piclist',0,0,5);
-		classNormal('ifocus_btn','ifocus_tx');
-		classCurrent('ifocus_btn','ifocus_tx',0);
-	}
-
 }
+
 addLoadEvent(iFocusChange);

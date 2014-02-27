@@ -1,4 +1,4 @@
-<?php exit;?>a:3:{s:8:"template";a:7:{i:0;s:45:"D:/wamp/www/1/themes/ecmoban_kangtu/index.dwt";i:1;s:59:"D:/wamp/www/1/themes/ecmoban_kangtu/library/page_header.lbi";i:2;s:61:"D:/wamp/www/1/themes/ecmoban_kangtu/library/category_tree.lbi";i:3;s:62:"D:/wamp/www/1/themes/ecmoban_kangtu/library/recommend_best.lbi";i:4;s:60:"D:/wamp/www/1/themes/ecmoban_kangtu/library/new_articles.lbi";i:5;s:52:"D:/wamp/www/1/themes/ecmoban_kangtu/library/help.lbi";i:6;s:59:"D:/wamp/www/1/themes/ecmoban_kangtu/library/page_footer.lbi";}s:7:"expires";i:1393418514;s:8:"maketime";i:1393414914;}<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<?php exit;?>a:3:{s:8:"template";a:7:{i:0;s:54:"E:/LAMP/Apache2/htdocs/themes/ecmoban_kangtu/index.dwt";i:1;s:68:"E:/LAMP/Apache2/htdocs/themes/ecmoban_kangtu/library/page_header.lbi";i:2;s:70:"E:/LAMP/Apache2/htdocs/themes/ecmoban_kangtu/library/category_tree.lbi";i:3;s:71:"E:/LAMP/Apache2/htdocs/themes/ecmoban_kangtu/library/recommend_best.lbi";i:4;s:69:"E:/LAMP/Apache2/htdocs/themes/ecmoban_kangtu/library/new_articles.lbi";i:5;s:61:"E:/LAMP/Apache2/htdocs/themes/ecmoban_kangtu/library/help.lbi";i:6;s:68:"E:/LAMP/Apache2/htdocs/themes/ecmoban_kangtu/library/page_footer.lbi";}s:7:"expires";i:1393470429;s:8:"maketime";i:1393466829;}<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta name="Generator" content="ECSHOP v2.7.2" />
@@ -29,8 +29,6 @@ var process_request = "正在处理您的请求...";
   <a class="a1" href="tag_cloud.php" >标签云</a>
   |
   <a class="a1" href="quotation.php" >报价单</a>
-  |
-  <a class="a1" href="activity.php" >关于我们</a>
   |
 	
     <a id="g-wb" href="http://e.weibo.com/yuanzhengouwu" target="_blank"><i></i>关注我们</a>
@@ -101,7 +99,7 @@ var process_request = "正在处理您的请求...";
   <a class="a1  cur " href="index.php"  >首页 </a>
    
   <div class="u1" onmouseover="this.className='u1 u1_over'" onmouseout="this.className='u1'" >
-  <a  class="a1 "  href="category.php?id=3" >走进佛坪</a>
+  <a  class="a1 "  href="article_cat.php?id=4" >走进佛坪</a>
                     
   
   </div>
@@ -131,13 +129,13 @@ var process_request = "正在处理您的请求...";
   </div>
   
   <div class="u1" onmouseover="this.className='u1 u1_over'" onmouseout="this.className='u1'" >
-  <a  class="a1 "  href="snatch.php" >会员中心</a>
+  <a  class="a1 "  href="exchange.php" >会员中心</a>
                     
   
   </div>
   
   <div class="u1" onmouseover="this.className='u1 u1_over'" onmouseout="this.className='u1'" >
-  <a  class="a1 "  href="auction.php" >预约服务</a>
+  <a  class="a1 "  href="message.php" >关于我们</a>
                     
   
   </div>
@@ -151,7 +149,7 @@ var process_request = "正在处理您的请求...";
 	<div class="title"><i></i>源臻产品</div>
 	<ul class="tree">
 	<li class="c-">
-		<a href="category.php?id=1" class="lv1"><i></i>有机五谷</a>
+		<a href="category.php?id=1" class="lv1"><i></i>手机类型</a>
 		
 		<div class="sub">
 						<dl>
@@ -160,7 +158,7 @@ var process_request = "正在处理您的请求...";
 							</dd>
 			</dl>
 						<dl>
-			<dt><a href="category.php?id=3" class="lv2">有机五谷</a></dt>
+			<dt><a href="category.php?id=3" class="lv2">GSM手机</a></dt>
 			<dd>
 							</dd>
 			</dl>
@@ -177,7 +175,7 @@ var process_request = "正在处理您的请求...";
 					</div>
 	</li>
 	<li class="c-">
-		<a href="category.php?id=6" class="lv1"><i></i>肉禽奶蛋</a>
+		<a href="category.php?id=6" class="lv1"><i></i>手机配件</a>
 		
 		<div class="sub">
 						<dl>
@@ -203,7 +201,7 @@ var process_request = "正在处理您的请求...";
 					</div>
 	</li>
 	<li class="c-">
-		<a href="category.php?id=12" class="lv1"><i></i>精品水果</a>
+		<a href="category.php?id=12" class="lv1"><i></i>充值卡</a>
 		
 		<div class="sub">
 						<dl>
@@ -221,54 +219,6 @@ var process_request = "正在处理您的请求...";
 			<dd>
 							</dd>
 			</dl>
-					</div>
-	</li>
-	<li class="c-">
-		<a href="category.php?id=16" class="lv1"><i></i>野生山珍</a>
-		
-		<div class="sub">
-					</div>
-	</li>
-	<li class="c-">
-		<a href="category.php?id=17" class="lv1"><i></i>滋补养生</a>
-		
-		<div class="sub">
-					</div>
-	</li>
-	<li class="c-">
-		<a href="category.php?id=18" class="lv1"><i></i>名庄佳酿</a>
-		
-		<div class="sub">
-					</div>
-	</li>
-	<li class="c-">
-		<a href="category.php?id=19" class="lv1"><i></i>一个分类</a>
-		
-		<div class="sub">
-					</div>
-	</li>
-	<li class="c-">
-		<a href="category.php?id=20" class="lv1"><i></i>两个分类</a>
-		
-		<div class="sub">
-					</div>
-	</li>
-	<li class="c-">
-		<a href="category.php?id=21" class="lv1"><i></i>三个分类</a>
-		
-		<div class="sub">
-					</div>
-	</li>
-	<li class="c-">
-		<a href="category.php?id=22" class="lv1"><i></i>四个分类</a>
-		
-		<div class="sub">
-					</div>
-	</li>
-	<li class="c-">
-		<a href="category.php?id=23" class="lv1"><i></i>五个分类</a>
-		
-		<div class="sub">
 					</div>
 	</li>
 	</ul>
@@ -311,20 +261,6 @@ var process_request = "正在处理您的请求...";
 	<font class="f1">
 				￥399元			</font>
 </div>
-<div class="goodsItem">
-	<a href="goods.php?id=17"><img src="images/200905/thumb_img/17_thumb_G_1241969394587.jpg" alt="夏新N7" class="goodsimg" /></a><br />
-	<p class="f1"><a href="goods.php?id=17" title="夏新N7">夏新N7</a></p>
-    <font class="market">￥2760元</font><br />
-	<font class="f1">
-				￥2300元			</font>
-</div>
-<div class="goodsItem">
-	<a href="goods.php?id=19"><img src="images/200905/thumb_img/19_thumb_G_1241970175208.jpg" alt="三星SGH-F258" class="goodsimg" /></a><br />
-	<p class="f1"><a href="goods.php?id=19" title="三星SGH-F258">三星SGH-F...</a></p>
-    <font class="market">￥1030元</font><br />
-	<font class="f1">
-				￥858元			</font>
-</div>
 </div>
 </div>
 <div class="blank"></div>
@@ -340,34 +276,12 @@ var process_request = "正在处理您的请求...";
 		<div class="cnt">
 			<div class="img">
 			<a href="topic.php?topic_id=4">
-                        					<img src="data/article/1393402483438692517.jpg" style="width:193px;height:187px;" />
-                                        	                        	                        	                        	                        	                        	            			</a>
+            			</a>
 			</div>
 			<!-- <div class="title">新闻快讯</div>-->
 			<div class="summary">
 				<ul>
-  <li>
-	[<a href="article_cat.php?id=13">新闻</a>] <a href="data/article/1393402483438692517.jpg" title="asdfas a fasd ">asdfas a f...</a>
-	</li>
-  <li>
-	[<a href="article_cat.php?id=13">新闻</a>] <a href="data/article/1393399615096181993.jpg" title="92483lxnfcg056jlkx">92483lxnfc...</a>
-	</li>
-  <li>
-	[<a href="article_cat.php?id=13">新闻</a>] <a href="article.php?id=45" title="12345679865432134659876">1234567986...</a>
-	</li>
-  <li>
-	[<a href="article_cat.php?id=13">新闻</a>] <a href="article.php?id=44" title="abceefhgljljflasdjflajsdlfjaldsafads">abceefhglj...</a>
-	</li>
-  <li>
-	[<a href="article_cat.php?id=13">新闻</a>] <a href="article.php?id=40" title="水电费">水电费</a>
-	</li>
-  <li>
-	[<a href="article_cat.php?id=13">新闻</a>] <a href="article.php?id=39" title="打个电话更好水电费水电费水电费水电费水电费水电费收到水电费水电费水电费水电费水电费水电费水电费水电费">打个电话更好水电费水...</a>
-	</li>
-  <li>
-	[<a href="article_cat.php?id=13">新闻</a>] <a href="article.php?id=38" title="阿房宫">阿房宫</a>
-	</li>
-</ul> 			</div>
+</ul>			</div>
 			<div class="more"><a href="article_cat.php?id=13">&gt;&gt; more</a></div>
 		</div>
 	</div>

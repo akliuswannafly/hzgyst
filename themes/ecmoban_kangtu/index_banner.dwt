@@ -1,0 +1,45 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>test</title>
+<link href="/css/base.css" rel="stylesheet" type="text/css" />
+{insert_scripts files='showpic.js'}
+</head>
+<body>
+<div id="ifocus">
+  <div id="ifocus_pic">
+    <div id="ifocus_piclist">
+	 <ul>
+<!--{foreach from=$flash_xml item=flash}-->
+	 <li><a href="#" target="_blank"><img src="{$flash.src}" alt="{$flash.text}" width="757" height="300" ></a></li>
+<!--{/foreach}-->
+	 </ul>
+     </div>
+     <div id="ifocus_opdiv"></div>
+     <div id="ifocus_tx">
+      <ul>
+<!--{foreach name=flash_list from=$flash_xml item=flash}-->
+	<!-- {if $smarty.foreach.flash_list.first} -->
+		<li class="current"><a href="#" target="_blank">{$flash.text}</a></li>
+	<!-- {else} -->
+		<li class="normal"><a href="#" target="_blank">{$flash.text}</a></li>
+	<!--{/if}-->
+<!--{/foreach}-->  
+       </ul>
+      </div>
+      </div>
+  <div id="ifocus_btn">
+    <ul>
+<!--{foreach name=flash_list from=$flash_xml item=flash}-->
+	<!-- {if $smarty.foreach.flash_list.first} -->
+		<li class="current"><a href="#" target="_blank"><img src="{$flash.src}" alt="{$flash.text}" width="100" height="44"></a></li>
+	<!-- {else} -->
+		<li class="normal"><a href="#" target="_blank"><img src="{$flash.src}" alt="{$flash.text}" width="100" height="44"></a></li>
+	<!--{/if}-->
+<!--{/foreach}-->  
+    </ul>
+  </div>
+</div>
+</body>
+</html>
