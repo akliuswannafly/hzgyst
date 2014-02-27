@@ -30,10 +30,22 @@ function moveElement(elementID,final_x,final_y,interval) {
   if (xpos == final_x && ypos == final_y) {
 		return true;
   }
-  var dist = Math.ceil((final_x - xpos)/10);
-  xpos = xpos + dist;
-  dist = Math.ceil((final_y - ypos)/10);
-  ypos = ypos + dist;
+  	  if (xpos < final_x) {
+	    var dist = Math.ceil((final_x - xpos)/10);
+	    xpos = xpos + dist;
+	  }
+	  if (xpos > final_x) {
+	    var dist = Math.ceil((xpos - final_x)/10);
+	    xpos = xpos - dist;
+	  }
+	  if (ypos < final_y) {
+	    var dist = Math.ceil((final_y - ypos)/10);
+	    ypos = ypos + dist;
+	  }
+	  if (ypos > final_y) {
+	    var dist = Math.ceil((ypos - final_y)/10);
+	    ypos = ypos - dist;
+	  }
 
   elem.style.left = xpos + "px";
   elem.style.top = ypos + "px";

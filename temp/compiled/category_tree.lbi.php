@@ -1,6 +1,6 @@
 
 <div id="category_tree">
-	<div class="title"><i></i>源臻产品</div>
+	<div class="title"><i></i>生态产品</div>
 	<ul class="tree">
 <?php $_from = $this->_var['categories']; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array'); }; $this->push_vars('', 'cat');if (count($_from)):
     foreach ($_from AS $this->_var['cat']):

@@ -1,9 +1,25 @@
 <?php
 $data = array (
+  21 => 
+  array (
+    'cat_id' => '21',
+    'cat_name' => '其它产品D',
+    'measure_unit' => '',
+    'parent_id' => '0',
+    'is_show' => '1',
+    'show_in_nav' => '0',
+    'grade' => '0',
+    'sort_order' => '50',
+    'has_children' => '0',
+    'goods_num' => 0,
+    'level' => 0,
+    'id' => '21',
+    'name' => '其它产品D',
+  ),
   1 => 
   array (
     'cat_id' => '1',
-    'cat_name' => '手机类型',
+    'cat_name' => '肉禽奶蛋',
     'measure_unit' => '',
     'parent_id' => '0',
     'is_show' => '1',
@@ -14,7 +30,7 @@ $data = array (
     'goods_num' => 0,
     'level' => 0,
     'id' => '1',
-    'name' => '手机类型',
+    'name' => '肉禽奶蛋',
   ),
   4 => 
   array (
@@ -80,10 +96,26 @@ $data = array (
     'id' => '3',
     'name' => 'GSM手机',
   ),
+  18 => 
+  array (
+    'cat_id' => '18',
+    'cat_name' => '其它产品A',
+    'measure_unit' => '',
+    'parent_id' => '0',
+    'is_show' => '1',
+    'show_in_nav' => '0',
+    'grade' => '0',
+    'sort_order' => '50',
+    'has_children' => '0',
+    'goods_num' => 0,
+    'level' => 0,
+    'id' => '18',
+    'name' => '其它产品A',
+  ),
   12 => 
   array (
     'cat_id' => '12',
-    'cat_name' => '充值卡',
+    'cat_name' => '有机五谷',
     'measure_unit' => '',
     'parent_id' => '0',
     'is_show' => '1',
@@ -94,7 +126,7 @@ $data = array (
     'goods_num' => 0,
     'level' => 0,
     'id' => '12',
-    'name' => '充值卡',
+    'name' => '有机五谷',
   ),
   15 => 
   array (
@@ -144,10 +176,58 @@ $data = array (
     'id' => '14',
     'name' => '移动手机充值卡',
   ),
+  22 => 
+  array (
+    'cat_id' => '22',
+    'cat_name' => '其它产品E',
+    'measure_unit' => '',
+    'parent_id' => '0',
+    'is_show' => '1',
+    'show_in_nav' => '0',
+    'grade' => '0',
+    'sort_order' => '50',
+    'has_children' => '0',
+    'goods_num' => 0,
+    'level' => 0,
+    'id' => '22',
+    'name' => '其它产品E',
+  ),
+  19 => 
+  array (
+    'cat_id' => '19',
+    'cat_name' => '其它产品B',
+    'measure_unit' => '',
+    'parent_id' => '0',
+    'is_show' => '1',
+    'show_in_nav' => '0',
+    'grade' => '0',
+    'sort_order' => '50',
+    'has_children' => '0',
+    'goods_num' => 0,
+    'level' => 0,
+    'id' => '19',
+    'name' => '其它产品B',
+  ),
+  16 => 
+  array (
+    'cat_id' => '16',
+    'cat_name' => '野生山珍',
+    'measure_unit' => '',
+    'parent_id' => '0',
+    'is_show' => '1',
+    'show_in_nav' => '0',
+    'grade' => '0',
+    'sort_order' => '50',
+    'has_children' => '0',
+    'goods_num' => 0,
+    'level' => 0,
+    'id' => '16',
+    'name' => '野生山珍',
+  ),
   6 => 
   array (
     'cat_id' => '6',
-    'cat_name' => '手机配件',
+    'cat_name' => '精品水果',
     'measure_unit' => '',
     'parent_id' => '0',
     'is_show' => '1',
@@ -158,7 +238,7 @@ $data = array (
     'goods_num' => 0,
     'level' => 0,
     'id' => '6',
-    'name' => '手机配件',
+    'name' => '精品水果',
   ),
   7 => 
   array (
@@ -223,6 +303,38 @@ $data = array (
     'level' => 1,
     'id' => '11',
     'name' => '读卡器和内存卡',
+  ),
+  20 => 
+  array (
+    'cat_id' => '20',
+    'cat_name' => '其它产品C',
+    'measure_unit' => '',
+    'parent_id' => '0',
+    'is_show' => '1',
+    'show_in_nav' => '0',
+    'grade' => '0',
+    'sort_order' => '50',
+    'has_children' => '0',
+    'goods_num' => 0,
+    'level' => 0,
+    'id' => '20',
+    'name' => '其它产品C',
+  ),
+  17 => 
+  array (
+    'cat_id' => '17',
+    'cat_name' => '名庄佳酿',
+    'measure_unit' => '',
+    'parent_id' => '0',
+    'is_show' => '1',
+    'show_in_nav' => '0',
+    'grade' => '0',
+    'sort_order' => '50',
+    'has_children' => '0',
+    'goods_num' => 0,
+    'level' => 0,
+    'id' => '17',
+    'name' => '名庄佳酿',
   ),
 );
 ?>

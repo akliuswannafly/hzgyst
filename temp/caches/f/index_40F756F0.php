@@ -1,4 +1,4 @@
-<?php exit;?>a:3:{s:8:"template";a:7:{i:0;s:54:"E:/LAMP/Apache2/htdocs/themes/ecmoban_kangtu/index.dwt";i:1;s:68:"E:/LAMP/Apache2/htdocs/themes/ecmoban_kangtu/library/page_header.lbi";i:2;s:70:"E:/LAMP/Apache2/htdocs/themes/ecmoban_kangtu/library/category_tree.lbi";i:3;s:71:"E:/LAMP/Apache2/htdocs/themes/ecmoban_kangtu/library/recommend_best.lbi";i:4;s:69:"E:/LAMP/Apache2/htdocs/themes/ecmoban_kangtu/library/new_articles.lbi";i:5;s:61:"E:/LAMP/Apache2/htdocs/themes/ecmoban_kangtu/library/help.lbi";i:6;s:68:"E:/LAMP/Apache2/htdocs/themes/ecmoban_kangtu/library/page_footer.lbi";}s:7:"expires";i:1393470429;s:8:"maketime";i:1393466829;}<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<?php exit;?>a:3:{s:8:"template";a:7:{i:0;s:54:"E:/LAMP/Apache2/htdocs/themes/ecmoban_kangtu/index.dwt";i:1;s:68:"E:/LAMP/Apache2/htdocs/themes/ecmoban_kangtu/library/page_header.lbi";i:2;s:70:"E:/LAMP/Apache2/htdocs/themes/ecmoban_kangtu/library/category_tree.lbi";i:3;s:71:"E:/LAMP/Apache2/htdocs/themes/ecmoban_kangtu/library/recommend_best.lbi";i:4;s:69:"E:/LAMP/Apache2/htdocs/themes/ecmoban_kangtu/library/new_articles.lbi";i:5;s:61:"E:/LAMP/Apache2/htdocs/themes/ecmoban_kangtu/library/help.lbi";i:6;s:68:"E:/LAMP/Apache2/htdocs/themes/ecmoban_kangtu/library/page_footer.lbi";}s:7:"expires";i:1393501770;s:8:"maketime";i:1393498170;}<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta name="Generator" content="ECSHOP v2.7.2" />
@@ -111,7 +111,7 @@ var process_request = "正在处理您的请求...";
   </div>
   
   <div class="u1" onmouseover="this.className='u1 u1_over'" onmouseout="this.className='u1'" >
-  <a  class="a1 "  href="category.php?id=6" >谷阳基地</a>
+  <a  class="a1 "  href="category.php?id=6" >精品水果</a>
                     
   
   </div>
@@ -146,10 +146,10 @@ var process_request = "正在处理您的请求...";
 <div class="block clearfix">
 <div class="AreaL">
 <div id="category_tree">
-	<div class="title"><i></i>源臻产品</div>
+	<div class="title"><i></i>生态产品</div>
 	<ul class="tree">
 	<li class="c-">
-		<a href="category.php?id=1" class="lv1"><i></i>手机类型</a>
+		<a href="category.php?id=1" class="lv1"><i></i>肉禽奶蛋</a>
 		
 		<div class="sub">
 						<dl>
@@ -175,7 +175,7 @@ var process_request = "正在处理您的请求...";
 					</div>
 	</li>
 	<li class="c-">
-		<a href="category.php?id=6" class="lv1"><i></i>手机配件</a>
+		<a href="category.php?id=6" class="lv1"><i></i>精品水果</a>
 		
 		<div class="sub">
 						<dl>
@@ -201,7 +201,7 @@ var process_request = "正在处理您的请求...";
 					</div>
 	</li>
 	<li class="c-">
-		<a href="category.php?id=12" class="lv1"><i></i>充值卡</a>
+		<a href="category.php?id=12" class="lv1"><i></i>有机五谷</a>
 		
 		<div class="sub">
 						<dl>
@@ -221,6 +221,48 @@ var process_request = "正在处理您的请求...";
 			</dl>
 					</div>
 	</li>
+	<li class="c-">
+		<a href="category.php?id=16" class="lv1"><i></i>野生山珍</a>
+		
+		<div class="sub">
+					</div>
+	</li>
+	<li class="c-">
+		<a href="category.php?id=17" class="lv1"><i></i>名庄佳酿</a>
+		
+		<div class="sub">
+					</div>
+	</li>
+	<li class="c-">
+		<a href="category.php?id=18" class="lv1"><i></i>其它产品A</a>
+		
+		<div class="sub">
+					</div>
+	</li>
+	<li class="c-">
+		<a href="category.php?id=19" class="lv1"><i></i>其它产品B</a>
+		
+		<div class="sub">
+					</div>
+	</li>
+	<li class="c-">
+		<a href="category.php?id=20" class="lv1"><i></i>其它产品C</a>
+		
+		<div class="sub">
+					</div>
+	</li>
+	<li class="c-">
+		<a href="category.php?id=21" class="lv1"><i></i>其它产品D</a>
+		
+		<div class="sub">
+					</div>
+	</li>
+	<li class="c-">
+		<a href="category.php?id=22" class="lv1"><i></i>其它产品E</a>
+		
+		<div class="sub">
+					</div>
+	</li>
 	</ul>
 </div>
 <div class="blank"></div>
@@ -236,7 +278,7 @@ var process_request = "正在处理您的请求...";
 <div class="blank"></div>
 <div class="box ">
 <div class="tit1">
-	<span>臻品推荐</span>
+	<span>产品展示</span>
 	<a class="more" href="search.php?intro=best">更多</a> 
 </div>  
 <div id="show_best_area" class="clearfix">
@@ -261,6 +303,20 @@ var process_request = "正在处理您的请求...";
 	<font class="f1">
 				￥399元			</font>
 </div>
+<div class="goodsItem">
+	<a href="goods.php?id=17"><img src="images/200905/thumb_img/17_thumb_G_1241969394587.jpg" alt="夏新N7" class="goodsimg" /></a><br />
+	<p class="f1"><a href="goods.php?id=17" title="夏新N7">夏新N7</a></p>
+    <font class="market">￥2760元</font><br />
+	<font class="f1">
+				￥2300元			</font>
+</div>
+<div class="goodsItem">
+	<a href="goods.php?id=19"><img src="images/200905/thumb_img/19_thumb_G_1241970175208.jpg" alt="三星SGH-F258" class="goodsimg" /></a><br />
+	<p class="f1"><a href="goods.php?id=19" title="三星SGH-F258">三星SGH-F...</a></p>
+    <font class="market">￥1030元</font><br />
+	<font class="f1">
+				￥858元			</font>
+</div>
 </div>
 </div>
 <div class="blank"></div>
@@ -276,11 +332,33 @@ var process_request = "正在处理您的请求...";
 		<div class="cnt">
 			<div class="img">
 			<a href="topic.php?topic_id=4">
-            			</a>
+                        					<img src="data/article/1393497148821162273.jpg" style="width:193px;height:187px;" />
+                                        	                        	                        	                        	                        	                        	            			</a>
 			</div>
 			<!-- <div class="title">新闻快讯</div>-->
 			<div class="summary">
 				<ul>
+  <li>
+	[<a href="article_cat.php?id=13">新闻</a>] <a href="data/article/1393497148821162273.jpg" title="乐视签约NBA 称电视内容领先传统企业三年">乐视签约NBA 称电视内容...</a>
+	</li>
+  <li>
+	[<a href="article_cat.php?id=13">新闻</a>] <a href="data/article/1393497092831491676.png" title="苹果Siri对阵&quot;小i机器人&quot; 果粉来旁听法庭加座位">苹果Siri对阵"小i机器...</a>
+	</li>
+  <li>
+	[<a href="article_cat.php?id=13">新闻</a>] <a href="article.php?id=43" title="阿里与海南计划投资50亿元 打造“未来城市”">阿里与海南计划投资50亿元...</a>
+	</li>
+  <li>
+	[<a href="article_cat.php?id=13">新闻</a>] <a href="article.php?id=42" title="科学家用计算机破解了一道80余年的数学难题">科学家用计算机破解了一道8...</a>
+	</li>
+  <li>
+	[<a href="article_cat.php?id=13">新闻</a>] <a href="article.php?id=41" title="天弘基金为何亏损？高管称余额宝没想象中赚钱">天弘基金为何亏损？高管称余...</a>
+	</li>
+  <li>
+	[<a href="article_cat.php?id=13">新闻</a>] <a href="article.php?id=40" title="花旗唱衰苹果：iPad难有新创新">花旗唱衰苹果：iPad难有...</a>
+	</li>
+  <li>
+	[<a href="article_cat.php?id=13">新闻</a>] <a href="article.php?id=39" title="淘宝再布局 三八节或成移动版“双11”">淘宝再布局 三八节或成移动...</a>
+	</li>
 </ul>			</div>
 			<div class="more"><a href="article_cat.php?id=13">&gt;&gt; more</a></div>
 		</div>
