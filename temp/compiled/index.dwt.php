@@ -18,25 +18,27 @@
 <?php echo $this->smarty_insert_scripts(array('files'=>'common.js,index.js')); ?>
 </head>
 <body class="index_body">
+
+<?php echo $this->fetch('library/right_float.lbi'); ?>
+
 <?php echo $this->fetch('library/page_header.lbi'); ?>
 
 <div class="block clearfix">
 
 <div class="AreaL">
 
-
-<?php echo $this->fetch('library/category_tree.lbi'); ?>
-
-</div>
- 
-<div class="AreaR">
- 
-  
-
 	<div class="box clearfix">
 	<iframe src="index_banner.php" width="757px" height="380px" style="border:none;" scrolling="no"></iframe>
 	</div>
 
+</div>
+
+<div class="AreaR">
+	<div class="guanzhu-main">
+	<img src="data/images/guanzhu-img.jpg">
+	</div>
+	<div><a href="#"><img src="data/images/member01.jpg"></a></div>
+	<div><a href="#"><img src="data/images/member02.jpg"></a></div>
 </div>
 <div class="blank"></div>
 

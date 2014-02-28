@@ -1,4 +1,4 @@
-<?php exit;?>a:3:{s:8:"template";a:7:{i:0;s:54:"E:/LAMP/Apache2/htdocs/themes/ecmoban_kangtu/index.dwt";i:1;s:68:"E:/LAMP/Apache2/htdocs/themes/ecmoban_kangtu/library/page_header.lbi";i:2;s:70:"E:/LAMP/Apache2/htdocs/themes/ecmoban_kangtu/library/category_tree.lbi";i:3;s:71:"E:/LAMP/Apache2/htdocs/themes/ecmoban_kangtu/library/recommend_best.lbi";i:4;s:69:"E:/LAMP/Apache2/htdocs/themes/ecmoban_kangtu/library/new_articles.lbi";i:5;s:61:"E:/LAMP/Apache2/htdocs/themes/ecmoban_kangtu/library/help.lbi";i:6;s:68:"E:/LAMP/Apache2/htdocs/themes/ecmoban_kangtu/library/page_footer.lbi";}s:7:"expires";i:1393501770;s:8:"maketime";i:1393498170;}<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<?php exit;?>a:3:{s:8:"template";a:7:{i:0;s:54:"E:/LAMP/Apache2/htdocs/themes/ecmoban_kangtu/index.dwt";i:1;s:68:"E:/LAMP/Apache2/htdocs/themes/ecmoban_kangtu/library/right_float.lbi";i:2;s:68:"E:/LAMP/Apache2/htdocs/themes/ecmoban_kangtu/library/page_header.lbi";i:3;s:71:"E:/LAMP/Apache2/htdocs/themes/ecmoban_kangtu/library/recommend_best.lbi";i:4;s:69:"E:/LAMP/Apache2/htdocs/themes/ecmoban_kangtu/library/new_articles.lbi";i:5;s:61:"E:/LAMP/Apache2/htdocs/themes/ecmoban_kangtu/library/help.lbi";i:6;s:68:"E:/LAMP/Apache2/htdocs/themes/ecmoban_kangtu/library/page_footer.lbi";}s:7:"expires";i:1393596598;s:8:"maketime";i:1393592998;}<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta name="Generator" content="ECSHOP v2.7.2" />
@@ -12,6 +12,38 @@
 <link rel="alternate" type="application/rss+xml" title="RSS|ECSHOP演示站 - Powered by ECShop" href="feed.php" />
 <script type="text/javascript" src="js/common.js"></script><script type="text/javascript" src="js/index.js"></script></head>
 <body class="index_body">
+<script> 
+lastScrollY=0;
+function heartBeat(){ 
+var diffY;
+if (document.documentElement && document.documentElement.scrollTop)
+    diffY = document.documentElement.scrollTop;
+else if (document.body)
+    diffY = document.body.scrollTop
+else
+    {/*Netscape stuff*/}
+percent=.1*(diffY-lastScrollY); 
+if(percent>0)percent=Math.ceil(percent); 
+else percent=Math.floor(percent); 
+document.getElementById("category_tree").style.top=parseInt(document.getElementById("category_tree").style.top)+percent+"px";
+lastScrollY=lastScrollY+percent; 
+}
+suspendcode="<div id=\"category_tree\" style=\"right:15px;POSITION:absolute;TOP:190px;z-index:100; width:120px; height:200px;\">";
+suspendcode+="<div class=\"title\"><i></i>生态产品</div><ul class=\"tree\">";
+suspendcode+="<li class=\"c-\"><a href=\"category.php?id=1\" class=\"lv\"><i></i>肉禽奶蛋</a></li>";
+suspendcode+="<li class=\"c-\"><a href=\"category.php?id=6\" class=\"lv\"><i></i>精品水果</a></li>";
+suspendcode+="<li class=\"c-\"><a href=\"category.php?id=12\" class=\"lv\"><i></i>有机五谷</a></li>";
+suspendcode+="<li class=\"c-\"><a href=\"category.php?id=16\" class=\"lv\"><i></i>野生山珍</a></li>";
+suspendcode+="<li class=\"c-\"><a href=\"category.php?id=17\" class=\"lv\"><i></i>名庄佳酿</a></li>";
+suspendcode+="<li class=\"c-\"><a href=\"category.php?id=18\" class=\"lv\"><i></i>其它产品A</a></li>";
+suspendcode+="<li class=\"c-\"><a href=\"category.php?id=19\" class=\"lv\"><i></i>其它产品B</a></li>";
+suspendcode+="<li class=\"c-\"><a href=\"category.php?id=20\" class=\"lv\"><i></i>其它产品C</a></li>";
+suspendcode+="<li class=\"c-\"><a href=\"category.php?id=21\" class=\"lv\"><i></i>其它产品D</a></li>";
+suspendcode+="<li class=\"c-\"><a href=\"category.php?id=22\" class=\"lv\"><i></i>其它产品E</a></li>";
+suspendcode+="</ul><div class=\"blank\"></div></div>";
+document.write(suspendcode);
+window.setInterval("heartBeat()",1); 
+</script>
 <script type="text/javascript">
 var process_request = "正在处理您的请求...";
 </script>
@@ -41,7 +73,7 @@ var process_request = "正在处理您的请求...";
 <div class="buy_car_bg_box" >
 <div class="usermenu">
 	<dl>
-	<dt><a href="">我的源臻</a></dt>
+	<dt><a href="">用户登录</a></dt>
 	<dd>
 		<div class="settleup-content">
 			<div class="msg">您好，请登录</div>
@@ -61,8 +93,8 @@ var process_request = "正在处理您的请求...";
 	</dl>
 </div> 
 </div>
-	<div class="f_l" style="padding:8px 0"><a href="index.php" name="top"><img src="themes/ecmoban_kangtu/images/logo.png" width="65" /></a></div>
-	<div class="f_l" style="padding:50px 20px 0;"><img src="themes/ecmoban_kangtu/images/banner.png" /></div>
+	<div class="f_l" style="padding:8px 0"><a href="index.php" name="top"><img src="themes/ecmoban_kangtu/images/logo.png" width="80" /></a></div>
+	<div class="f_l" style="padding:20px 20px 0;"><img src="themes/ecmoban_kangtu/images/banner.png" /></div>
 </div>
 </div>
  
@@ -145,135 +177,16 @@ var process_request = "正在处理您的请求...";
 <div class="blank"></div>
 <div class="block clearfix">
 <div class="AreaL">
-<div id="category_tree">
-	<div class="title"><i></i>生态产品</div>
-	<ul class="tree">
-	<li class="c-">
-		<a href="category.php?id=1" class="lv1"><i></i>肉禽奶蛋</a>
-		
-		<div class="sub">
-						<dl>
-			<dt><a href="category.php?id=2" class="lv2">CDMA手机</a></dt>
-			<dd>
-							</dd>
-			</dl>
-						<dl>
-			<dt><a href="category.php?id=3" class="lv2">GSM手机</a></dt>
-			<dd>
-							</dd>
-			</dl>
-						<dl>
-			<dt><a href="category.php?id=4" class="lv2">3G手机</a></dt>
-			<dd>
-							</dd>
-			</dl>
-						<dl>
-			<dt><a href="category.php?id=5" class="lv2">双模手机</a></dt>
-			<dd>
-							</dd>
-			</dl>
-					</div>
-	</li>
-	<li class="c-">
-		<a href="category.php?id=6" class="lv1"><i></i>精品水果</a>
-		
-		<div class="sub">
-						<dl>
-			<dt><a href="category.php?id=7" class="lv2">充电器</a></dt>
-			<dd>
-							</dd>
-			</dl>
-						<dl>
-			<dt><a href="category.php?id=8" class="lv2">耳机</a></dt>
-			<dd>
-							</dd>
-			</dl>
-						<dl>
-			<dt><a href="category.php?id=9" class="lv2">电池</a></dt>
-			<dd>
-							</dd>
-			</dl>
-						<dl>
-			<dt><a href="category.php?id=11" class="lv2">读卡器和内存卡</a></dt>
-			<dd>
-							</dd>
-			</dl>
-					</div>
-	</li>
-	<li class="c-">
-		<a href="category.php?id=12" class="lv1"><i></i>有机五谷</a>
-		
-		<div class="sub">
-						<dl>
-			<dt><a href="category.php?id=13" class="lv2">小灵通/固话充值卡</a></dt>
-			<dd>
-							</dd>
-			</dl>
-						<dl>
-			<dt><a href="category.php?id=14" class="lv2">移动手机充值卡</a></dt>
-			<dd>
-							</dd>
-			</dl>
-						<dl>
-			<dt><a href="category.php?id=15" class="lv2">联通手机充值卡</a></dt>
-			<dd>
-							</dd>
-			</dl>
-					</div>
-	</li>
-	<li class="c-">
-		<a href="category.php?id=16" class="lv1"><i></i>野生山珍</a>
-		
-		<div class="sub">
-					</div>
-	</li>
-	<li class="c-">
-		<a href="category.php?id=17" class="lv1"><i></i>名庄佳酿</a>
-		
-		<div class="sub">
-					</div>
-	</li>
-	<li class="c-">
-		<a href="category.php?id=18" class="lv1"><i></i>其它产品A</a>
-		
-		<div class="sub">
-					</div>
-	</li>
-	<li class="c-">
-		<a href="category.php?id=19" class="lv1"><i></i>其它产品B</a>
-		
-		<div class="sub">
-					</div>
-	</li>
-	<li class="c-">
-		<a href="category.php?id=20" class="lv1"><i></i>其它产品C</a>
-		
-		<div class="sub">
-					</div>
-	</li>
-	<li class="c-">
-		<a href="category.php?id=21" class="lv1"><i></i>其它产品D</a>
-		
-		<div class="sub">
-					</div>
-	</li>
-	<li class="c-">
-		<a href="category.php?id=22" class="lv1"><i></i>其它产品E</a>
-		
-		<div class="sub">
-					</div>
-	</li>
-	</ul>
-</div>
-<div class="blank"></div>
-</div>
- 
-<div class="AreaR">
- 
-  
 	<div class="box clearfix">
 	<iframe src="index_banner.php" width="757px" height="380px" style="border:none;" scrolling="no"></iframe>
 	</div>
+</div>
+<div class="AreaR">
+	<div class="guanzhu-main">
+	<img src="data/images/guanzhu-img.jpg">
+	</div>
+	<div><a href="#"><img src="data/images/member01.jpg"></a></div>
+	<div><a href="#"><img src="data/images/member02.jpg"></a></div>
 </div>
 <div class="blank"></div>
 <div class="box ">
@@ -359,7 +272,7 @@ var process_request = "正在处理您的请求...";
   <li>
 	[<a href="article_cat.php?id=13">新闻</a>] <a href="article.php?id=39" title="淘宝再布局 三八节或成移动版“双11”">淘宝再布局 三八节或成移动...</a>
 	</li>
-</ul>			</div>
+</ul> 			</div>
 			<div class="more"><a href="article_cat.php?id=13">&gt;&gt; more</a></div>
 		</div>
 	</div>

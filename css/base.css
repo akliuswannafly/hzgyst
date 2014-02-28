@@ -4,7 +4,7 @@ body,p,ul,li{
 a{text-decoration: none;}
 li{list-style:none;}
 #ifocus{
-	border:#D7D7D7 solid 1px;
+
 	height:400px;
 	width:757px;
 	overflow:hidden;
@@ -47,7 +47,7 @@ li{list-style:none;}
 	position:absolute;
 	left:0;
 	bottom:0;
-	width:700px;
+	width:615px;
 	height:35px;
 	line-height:35px;
 	text-align:center;

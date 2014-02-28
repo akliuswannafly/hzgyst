@@ -15,7 +15,7 @@
 <?php $_from = $this->_var['flash_xml']; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array'); }; $this->push_vars('', 'flash');if (count($_from)):
     foreach ($_from AS $this->_var['flash']):
 ?>
-	 <li><a href="#" target="_blank"><img src="<?php echo $this->_var['flash']['src']; ?>" alt="<?php echo $this->_var['flash']['text']; ?>" width="757" height="300" ></a></li>
+	 <li><a href="#" target="_blank"><img src="<?php echo $this->_var['flash']['src']; ?>" alt="<?php echo $this->_var['flash']['text']; ?>" width="615" height="300" ></a></li>
 <?php endforeach; endif; unset($_from); ?><?php $this->pop_vars();; ?>
 	 </ul>
      </div>

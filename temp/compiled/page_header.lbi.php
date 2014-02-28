@@ -46,7 +46,7 @@ if ($this->_foreach['nav_top_list']['total'] > 0):
 
 <div class="usermenu">
 	<dl>
-	<dt><a href="">我的源臻</a></dt>
+	<dt><a href="">用户登录</a></dt>
 	<dd>
 		<div class="settleup-content">
 			<div class="msg">您好，请登录</div>
@@ -77,8 +77,8 @@ echo $this->_echash . $k['name'] . '|' . serialize($k) . $this->_echash;
 
 
 
-	<div class="f_l" style="padding:8px 0"><a href="index.php" name="top"><img src="themes/ecmoban_kangtu/images/logo.png" width="65" /></a></div>
-	<div class="f_l" style="padding:50px 20px 0;"><img src="themes/ecmoban_kangtu/images/banner.png" /></div>
+	<div class="f_l" style="padding:8px 0"><a href="index.php" name="top"><img src="themes/ecmoban_kangtu/images/logo.png" width="80" /></a></div>
+	<div class="f_l" style="padding:20px 20px 0;"><img src="themes/ecmoban_kangtu/images/banner.png" /></div>
 </div>
 </div>
  

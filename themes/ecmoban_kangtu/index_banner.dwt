@@ -12,7 +12,7 @@
     <div id="ifocus_piclist">
 	 <ul>
 <!--{foreach from=$flash_xml item=flash}-->
-	 <li><a href="#" target="_blank"><img src="{$flash.src}" alt="{$flash.text}" width="757" height="300" ></a></li>
+	 <li><a href="#" target="_blank"><img src="{$flash.src}" alt="{$flash.text}" width="615" height="300" ></a></li>
 <!--{/foreach}-->
 	 </ul>
      </div>
